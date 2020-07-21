@@ -14,6 +14,10 @@
     },
     "profileUrl": {
       "type": "string"
+    },
+    "projects": {
+      "via": "authors",
+      "collection": "project"
     }
   }
 }
