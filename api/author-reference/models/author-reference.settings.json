@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "author_references",
+  "info": {
+    "name": "Author"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "profileUrl": {
+      "type": "string"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "author_references"
+    }
+  }
+}

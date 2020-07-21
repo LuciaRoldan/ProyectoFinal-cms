@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "creationDate": {
+      "type": "date"
+    },
+    "author_references": {
+      "via": "projects",
+      "collection": "author-reference",
+      "dominant": true
+    }
+  }
+}
