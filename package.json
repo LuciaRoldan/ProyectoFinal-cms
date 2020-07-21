@@ -4,9 +4,10 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "cp .env.dev .env && strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
+    "build": "cp .env.prod .env && strapi build",
+    "build-test": "cp .env.test .env && strapi build",
     "strapi": "strapi"
   },
   "devDependencies": {},
@@ -20,8 +21,8 @@
     "strapi-plugin-email": "3.0.6",
     "strapi-plugin-upload": "3.0.6",
     "strapi-connector-bookshelf": "3.0.6",
-    "knex": "<0.20.0",
-    "sqlite3": "latest"
+    "strapi-connector-mongoose": "3.0.6",
+    "knex": "<0.20.0"
   },
   "author": {
     "name": "A Strapi developer"

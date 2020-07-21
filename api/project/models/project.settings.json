@@ -20,11 +20,6 @@
     },
     "creationDate": {
       "type": "date"
-    },
-    "author_references": {
-      "via": "projects",
-      "collection": "author-reference",
-      "dominant": true
     }
   }
 }

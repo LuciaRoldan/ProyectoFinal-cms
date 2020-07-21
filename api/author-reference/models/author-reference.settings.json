@@ -14,10 +14,6 @@
     },
     "profileUrl": {
       "type": "string"
-    },
-    "projects": {
-      "collection": "project",
-      "via": "author_references"
     }
   }
 }
