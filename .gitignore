@@ -241,3 +241,6 @@ dist
 .env.dev
 .env.prod
 .env.test
+
+
+package-lock.json
