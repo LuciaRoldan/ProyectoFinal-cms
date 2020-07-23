@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "authors",
+  "collectionName": "supervisor_refs",
   "info": {
-    "name": "Author"
+    "name": "SupervisorRef"
   },
   "options": {
     "increments": true,
@@ -12,11 +12,15 @@
     "username": {
       "type": "string"
     },
-    "proyectateProfileUrl": {
+    "profileUrl": {
       "type": "string"
     },
     "fullName": {
       "type": "string"
+    },
+    "project": {
+      "via": "supervisor_refs",
+      "model": "project"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/author-refs",
+      "handler": "author-ref.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/author-refs/count",
+      "handler": "author-ref.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/author-refs/:id",
+      "handler": "author-ref.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/author-refs",
+      "handler": "author-ref.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/author-refs/:id",
+      "handler": "author-ref.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/author-refs/:id",
+      "handler": "author-ref.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

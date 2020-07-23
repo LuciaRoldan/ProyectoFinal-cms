@@ -14,11 +14,6 @@
     },
     "proyectateProfileUrl": {
       "type": "string"
-    },
-    "projects": {
-      "collection": "project",
-      "via": "supervisors",
-      "dominant": true
     }
   }
 }

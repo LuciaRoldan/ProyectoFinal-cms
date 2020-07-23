@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "authors",
+  "collectionName": "author_refs",
   "info": {
-    "name": "Author"
+    "name": "AuthorRef"
   },
   "options": {
     "increments": true,
@@ -12,11 +12,15 @@
     "username": {
       "type": "string"
     },
-    "proyectateProfileUrl": {
-      "type": "string"
-    },
     "fullName": {
       "type": "string"
+    },
+    "profileUrl": {
+      "type": "string"
+    },
+    "project": {
+      "via": "author_refs",
+      "model": "project"
     }
   }
 }

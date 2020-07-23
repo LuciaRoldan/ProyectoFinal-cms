@@ -34,13 +34,13 @@
       "plugin": "upload",
       "required": false
     },
-    "authors": {
-      "via": "projects",
-      "collection": "author"
+    "author_refs": {
+      "collection": "author-ref",
+      "via": "project"
     },
-    "supervisors": {
-      "via": "projects",
-      "collection": "supervisor"
+    "supervisor_refs": {
+      "collection": "supervisor-ref",
+      "via": "project"
     }
   }
 }
