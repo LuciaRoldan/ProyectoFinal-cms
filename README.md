@@ -10,10 +10,11 @@ Implementación de Strapi - Headless CMS
 
 `yarn develop` lo levanta local.
 
-Medusa usa un Mongo para el almacenamiento, la conexión esá en el archivo `config/database.js`. Esto levanta variables de entorno para el host, puerto, usaurio, contraseña y nombre de la base, y estas variables de entorno las levanta del archivito `.env`, que está gitignoreada, por su naturaleza confidencial. También se ignoran 3 archivos más: `.env.dev`, `.env.prod` y `.env.test`, cada uno correspondiente a los 3 entornos: desarrollo local, producción y test.
+Medusa usa un Mongo para el almacenamiento, la conexión esá en el archivo `config/database.js`. Esto levanta variables de entorno para el host, puerto, usaurio, contraseña y nombre de la base, y estas variables de entorno las levanta del archivito `.env`, que está gitignoreada, por su naturaleza confidencial. En el `.env` debería detallarse lo siguiente:
 
-Estos archivos son necesarios para el ambiente productivo que se desee:
-
-- `yarn develop` reemplaza el `.env` por `.env.dev`.
-- `yarn build` reemplaza el `.env` por `.env.prod`
-- `yarn build-test` reemplaza el `.env` por `env.test`
+* `DATABASE_USERNAME`: user para conectarse a la bbdd.
+* `DATABASE_PASSWORD`: password del user para la bbdd.
+* `DATABASE_SRV`: si usamos un mongo local, puede ser `false`; para Heroku tiene que ser `true`.
+* `DATABASE_HOST`: host de la bbdd.
+* `DATABASE_PORT`: 27017 (a menos que se defina lo contrario).
+* `DATABASE_NAME`: nombre de la base a conectar. En test, es `proyectatest`.
