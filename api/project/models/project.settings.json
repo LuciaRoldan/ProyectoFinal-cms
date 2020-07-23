@@ -9,27 +9,21 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
-      "type": "string"
+    "title": {
+      "type": "string",
+      "required": true
     },
     "subtitle": {
       "type": "string"
     },
     "summary": {
+      "type": "richtext"
+    },
+    "description": {
       "type": "text"
     },
     "creationDate": {
       "type": "date"
-    },
-    "authors": {
-      "collection": "author-reference",
-      "via": "projects",
-      "dominant": true
-    },
-    "supervisors": {
-      "collection": "supervisor",
-      "via": "projects",
-      "dominant": true
     },
     "poster": {
       "model": "file",
@@ -39,6 +33,14 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "authors": {
+      "via": "projects",
+      "collection": "author"
+    },
+    "supervisors": {
+      "via": "projects",
+      "collection": "supervisor"
     }
   }
 }

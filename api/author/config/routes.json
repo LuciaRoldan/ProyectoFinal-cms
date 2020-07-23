@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/author-references",
-      "handler": "author-reference.find",
+      "path": "/authors",
+      "handler": "author.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/author-references/count",
-      "handler": "author-reference.count",
+      "path": "/authors/count",
+      "handler": "author.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/author-references/:id",
-      "handler": "author-reference.findOne",
+      "path": "/authors/:id",
+      "handler": "author.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/author-references",
-      "handler": "author-reference.create",
+      "path": "/authors",
+      "handler": "author.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/author-references/:id",
-      "handler": "author-reference.update",
+      "path": "/authors/:id",
+      "handler": "author.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/author-references/:id",
-      "handler": "author-reference.delete",
+      "path": "/authors/:id",
+      "handler": "author.delete",
       "config": {
         "policies": []
       }

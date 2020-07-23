@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "author_references",
+  "collectionName": "authors",
   "info": {
     "name": "Author"
   },
@@ -12,12 +12,13 @@
     "username": {
       "type": "string"
     },
-    "profileUrl": {
+    "proyectateProfileUrl": {
       "type": "string"
     },
     "projects": {
+      "collection": "project",
       "via": "authors",
-      "collection": "project"
+      "dominant": true
     }
   }
 }

@@ -12,12 +12,13 @@
     "username": {
       "type": "string"
     },
-    "profileUrl": {
+    "proyectateProfileUrl": {
       "type": "string"
     },
     "projects": {
+      "collection": "project",
       "via": "supervisors",
-      "collection": "project"
+      "dominant": true
     }
   }
 }
