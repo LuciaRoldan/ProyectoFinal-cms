@@ -19,6 +19,9 @@
       "collection": "project",
       "via": "authors",
       "dominant": true
+    },
+    "fullName": {
+      "type": "string"
     }
   }
 }
