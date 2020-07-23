@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "cp .env.dev .env && strapi develop",
+    "develop": "strapi develop",
     "start": "strapi start",
-    "build": "cp .env.prod .env && strapi build",
-    "build-test": "cp .env.test .env && strapi build",
+    "build": "strapi build",
+    "build-test": "strapi build",
     "strapi": "strapi"
   },
   "devDependencies": {},
