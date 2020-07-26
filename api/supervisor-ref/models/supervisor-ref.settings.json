@@ -12,15 +12,15 @@
     "username": {
       "type": "string"
     },
-    "profileUrl": {
+    "profile_url": {
       "type": "string"
     },
-    "fullName": {
+    "full_name": {
       "type": "string"
     },
     "project": {
-      "via": "supervisor_refs",
-      "model": "project"
+      "model": "project",
+      "via": "supervisor_refs"
     }
   }
 }

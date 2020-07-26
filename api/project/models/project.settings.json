@@ -35,12 +35,12 @@
       "required": false
     },
     "author_refs": {
-      "collection": "author-ref",
-      "via": "project"
+      "via": "project",
+      "collection": "author-ref"
     },
     "supervisor_refs": {
-      "collection": "supervisor-ref",
-      "via": "project"
+      "via": "project",
+      "collection": "supervisor-ref"
     }
   }
 }
