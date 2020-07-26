@@ -19,8 +19,8 @@
       "type": "string"
     },
     "project": {
-      "model": "project",
-      "via": "supervisor_refs"
+      "via": "supervisor_refs",
+      "model": "project"
     }
   }
 }

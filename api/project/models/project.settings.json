@@ -20,7 +20,8 @@
       "type": "richtext"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "creation_date": {
       "type": "date"
@@ -35,12 +36,12 @@
       "required": false
     },
     "author_refs": {
-      "via": "project",
-      "collection": "author-ref"
+      "collection": "author-ref",
+      "via": "project"
     },
     "supervisor_refs": {
-      "via": "project",
-      "collection": "supervisor-ref"
+      "collection": "supervisor-ref",
+      "via": "project"
     }
   }
 }
