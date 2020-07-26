@@ -18,3 +18,8 @@ Medusa usa un Mongo para el almacenamiento, la conexión esá en el archivo `con
 * `DATABASE_HOST`: host de la bbdd.
 * `DATABASE_PORT`: 27017 (a menos que se defina lo contrario).
 * `DATABASE_NAME`: nombre de la base a conectar. En test, es `proyectatest`.
+
+
+# Servidor de test
+
+https://proyectatest-bo.herokuapp.com/

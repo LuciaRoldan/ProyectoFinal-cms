@@ -22,7 +22,7 @@
     "description": {
       "type": "text"
     },
-    "creationDate": {
+    "creation_date": {
       "type": "date"
     },
     "poster": {
