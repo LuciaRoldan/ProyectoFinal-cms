@@ -668,6 +668,20 @@
               }
             }
           },
+          "tags": {
+            "type": "string",
+            "enum": [
+              "sistemas",
+              "educacion",
+              "entretenimiento",
+              "medicina",
+              "politica",
+              "musica",
+              "arte",
+              "quimica",
+              "biologia"
+            ]
+          },
           "created_by": {
             "required": [
               "id",
@@ -790,6 +804,20 @@
             "items": {
               "type": "string"
             }
+          },
+          "tags": {
+            "type": "string",
+            "enum": [
+              "sistemas",
+              "educacion",
+              "entretenimiento",
+              "medicina",
+              "politica",
+              "musica",
+              "arte",
+              "quimica",
+              "biologia"
+            ]
           },
           "created_by": {
             "type": "string"

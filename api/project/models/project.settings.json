@@ -42,6 +42,20 @@
     "supervisor_refs": {
       "collection": "supervisor-ref",
       "via": "project"
+    },
+    "tags": {
+      "type": "enumeration",
+      "enum": [
+        "sistemas",
+        "educacion",
+        "entretenimiento",
+        "medicina",
+        "politica",
+        "musica",
+        "arte",
+        "quimica",
+        "biologia"
+      ]
     }
   }
 }
