@@ -17,10 +17,6 @@
     },
     "profile_url": {
       "type": "string"
-    },
-    "project": {
-      "via": "author_refs",
-      "model": "project"
     }
   }
 }

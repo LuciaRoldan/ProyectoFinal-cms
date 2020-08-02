@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/02/2020 2:08:13 PM"
+    "x-generation-date": "08/02/2020 4:03:15 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4233,57 +4233,6 @@
           "profile_url": {
             "type": "string"
           },
-          "project": {
-            "required": [
-              "id",
-              "title",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "subtitle": {
-                "type": "string"
-              },
-              "summary": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "creation_date": {
-                "type": "string"
-              },
-              "poster": {
-                "type": "string"
-              },
-              "author_refs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "supervisor_refs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "created_by": {
             "required": [
               "id",
@@ -4385,9 +4334,6 @@
           "profile_url": {
             "type": "string"
           },
-          "project": {
-            "type": "string"
-          },
           "created_by": {
             "type": "string"
           },
@@ -4398,7 +4344,10 @@
       },
       "Category": {
         "required": [
-          "id"
+          "id",
+          "name",
+          "tag_name",
+          "image_url"
         ],
         "properties": {
           "id": {
@@ -4407,10 +4356,10 @@
           "name": {
             "type": "string"
           },
-          "tagName": {
+          "tag_name": {
             "type": "string"
           },
-          "imageUrl": {
+          "image_url": {
             "type": "string"
           },
           "created_by": {
@@ -4504,14 +4453,19 @@
         }
       },
       "NewCategory": {
+        "required": [
+          "name",
+          "tag_name",
+          "image_url"
+        ],
         "properties": {
           "name": {
             "type": "string"
           },
-          "tagName": {
+          "tag_name": {
             "type": "string"
           },
-          "imageUrl": {
+          "image_url": {
             "type": "string"
           },
           "created_by": {
@@ -4615,103 +4569,80 @@
             }
           },
           "author_refs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "full_name": {
-                  "type": "string"
-                },
-                "profile_url": {
-                  "type": "string"
-                },
-                "project": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string"
+              },
+              "profile_url": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "supervisor_refs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "profile_url": {
-                  "type": "string"
-                },
-                "full_name": {
-                  "type": "string"
-                },
-                "project": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "profile_url": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
           "category": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "category": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "tagName": {
-                      "type": "string"
-                    },
-                    "imageUrl": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                }
+            "required": [
+              "id",
+              "name",
+              "tag_name",
+              "image_url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "tag_name": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -4827,55 +4758,13 @@
             "type": "string"
           },
           "author_refs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "string"
           },
           "supervisor_refs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "string"
           },
           "category": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "category": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "tagName": {
-                      "type": "string"
-                    },
-                    "imageUrl": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -4901,57 +4790,6 @@
           },
           "full_name": {
             "type": "string"
-          },
-          "project": {
-            "required": [
-              "id",
-              "title",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "subtitle": {
-                "type": "string"
-              },
-              "summary": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "creation_date": {
-                "type": "string"
-              },
-              "poster": {
-                "type": "string"
-              },
-              "author_refs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "supervisor_refs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "created_by": {
             "required": [
@@ -5052,9 +4890,6 @@
             "type": "string"
           },
           "full_name": {
-            "type": "string"
-          },
-          "project": {
             "type": "string"
           },
           "created_by": {

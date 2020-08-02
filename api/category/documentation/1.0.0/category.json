@@ -516,7 +516,10 @@
     "schemas": {
       "Category": {
         "required": [
-          "id"
+          "id",
+          "name",
+          "tag_name",
+          "image_url"
         ],
         "properties": {
           "id": {
@@ -525,10 +528,10 @@
           "name": {
             "type": "string"
           },
-          "tagName": {
+          "tag_name": {
             "type": "string"
           },
-          "imageUrl": {
+          "image_url": {
             "type": "string"
           },
           "created_by": {
@@ -622,14 +625,19 @@
         }
       },
       "NewCategory": {
+        "required": [
+          "name",
+          "tag_name",
+          "image_url"
+        ],
         "properties": {
           "name": {
             "type": "string"
           },
-          "tagName": {
+          "tag_name": {
             "type": "string"
           },
-          "imageUrl": {
+          "image_url": {
             "type": "string"
           },
           "created_by": {

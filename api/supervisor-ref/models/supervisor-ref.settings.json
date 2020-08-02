@@ -17,10 +17,6 @@
     },
     "full_name": {
       "type": "string"
-    },
-    "project": {
-      "via": "supervisor_refs",
-      "model": "project"
     }
   }
 }

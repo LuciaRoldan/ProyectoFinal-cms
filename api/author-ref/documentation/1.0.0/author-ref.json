@@ -544,57 +544,6 @@
           "profile_url": {
             "type": "string"
           },
-          "project": {
-            "required": [
-              "id",
-              "title",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "subtitle": {
-                "type": "string"
-              },
-              "summary": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "creation_date": {
-                "type": "string"
-              },
-              "poster": {
-                "type": "string"
-              },
-              "author_refs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "supervisor_refs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "created_by": {
             "required": [
               "id",
@@ -694,9 +643,6 @@
             "type": "string"
           },
           "profile_url": {
-            "type": "string"
-          },
-          "project": {
             "type": "string"
           },
           "created_by": {

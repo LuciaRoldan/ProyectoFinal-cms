@@ -10,13 +10,16 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "tagName": {
-      "type": "string"
+    "tag_name": {
+      "type": "string",
+      "required": true
     },
-    "imageUrl": {
-      "type": "string"
+    "image_url": {
+      "type": "string",
+      "required": true
     }
   }
 }
