@@ -585,7 +585,7 @@
                 }
               },
               "category": {
-                "type": "string"
+                "type": "component"
               },
               "created_by": {
                 "type": "string"

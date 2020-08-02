@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/projects": {
+    "/categories": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Project"
+                    "$ref": "#/components/schemas/Category"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Category"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Category"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Category"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewCategory"
               }
             }
           }
         }
       }
     },
-    "/projects/count": {
+    "/categories/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Category"
         ],
         "parameters": []
       }
     },
-    "/projects/{id}": {
+    "/categories/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Category"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Category"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Category"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Category"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewCategory"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Category"
         ],
         "parameters": [
           {
@@ -514,198 +514,22 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "Category": {
         "required": [
-          "id",
-          "title",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "name": {
             "type": "string"
           },
-          "subtitle": {
+          "tagName": {
             "type": "string"
           },
-          "summary": {
+          "imageUrl": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "creation_date": {
-            "type": "string"
-          },
-          "poster": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "author_refs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "full_name": {
-                  "type": "string"
-                },
-                "profile_url": {
-                  "type": "string"
-                },
-                "project": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "supervisor_refs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "profile_url": {
-                  "type": "string"
-                },
-                "full_name": {
-                  "type": "string"
-                },
-                "project": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "category": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "category": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "tagName": {
-                      "type": "string"
-                    },
-                    "imageUrl": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
           },
           "created_by": {
             "required": [
@@ -797,77 +621,16 @@
           }
         }
       },
-      "NewProject": {
-        "required": [
-          "title",
-          "description"
-        ],
+      "NewCategory": {
         "properties": {
-          "title": {
+          "name": {
             "type": "string"
           },
-          "subtitle": {
+          "tagName": {
             "type": "string"
           },
-          "summary": {
+          "imageUrl": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "creation_date": {
-            "type": "string"
-          },
-          "author_refs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "supervisor_refs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "category": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "category": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "tagName": {
-                      "type": "string"
-                    },
-                    "imageUrl": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
           },
           "created_by": {
             "type": "string"
@@ -881,7 +644,7 @@
   },
   "tags": [
     {
-      "name": "Project"
+      "name": "Category"
     }
   ]
 }

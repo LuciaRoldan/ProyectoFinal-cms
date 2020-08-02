@@ -44,18 +44,9 @@
       "via": "project"
     },
     "category": {
-      "type": "enumeration",
-      "enum": [
-        "sistemas",
-        "educacion",
-        "entretenimiento",
-        "medicina",
-        "politica",
-        "musica",
-        "arte",
-        "quimica",
-        "biologia"
-      ]
+      "type": "component",
+      "repeatable": true,
+      "component": "category.project-category"
     }
   }
 }
