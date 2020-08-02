@@ -668,7 +668,7 @@
               }
             }
           },
-          "tags": {
+          "category": {
             "type": "string",
             "enum": [
               "sistemas",
@@ -805,7 +805,7 @@
               "type": "string"
             }
           },
-          "tags": {
+          "category": {
             "type": "string",
             "enum": [
               "sistemas",

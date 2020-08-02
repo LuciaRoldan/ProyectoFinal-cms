@@ -43,7 +43,7 @@
       "collection": "supervisor-ref",
       "via": "project"
     },
-    "tags": {
+    "category": {
       "type": "enumeration",
       "enum": [
         "sistemas",

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "07/30/2020 4:47:16 PM"
+    "x-generation-date": "08/02/2020 1:28:16 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3762,7 +3762,7 @@
                   "type": "string"
                 }
               },
-              "tags": {
+              "category": {
                 "type": "string"
               },
               "created_by": {
@@ -4039,7 +4039,7 @@
               }
             }
           },
-          "tags": {
+          "category": {
             "type": "string",
             "enum": [
               "sistemas",
@@ -4176,7 +4176,7 @@
               "type": "string"
             }
           },
-          "tags": {
+          "category": {
             "type": "string",
             "enum": [
               "sistemas",
@@ -4255,7 +4255,7 @@
                   "type": "string"
                 }
               },
-              "tags": {
+              "category": {
                 "type": "string"
               },
               "created_by": {
