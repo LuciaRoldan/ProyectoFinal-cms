@@ -45,9 +45,13 @@
       "model": "category"
     },
     "documentation": {
-      "collection": "documentation",
+      "collection": "file",
       "via": "related",
-      "repeatable": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
     }
