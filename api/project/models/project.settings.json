@@ -43,6 +43,13 @@
     },
     "category": {
       "model": "category"
+    },
+    "documentation": {
+      "collection": "documentation",
+      "via": "related",
+      "repeatable": true,
+      "plugin": "upload",
+      "required": false
     }
   }
 }
