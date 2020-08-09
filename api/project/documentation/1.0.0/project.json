@@ -748,6 +748,9 @@
               }
             }
           },
+          "extra_content": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -860,6 +863,9 @@
             "type": "string"
           },
           "category": {
+            "type": "string"
+          },
+          "extra_content": {
             "type": "string"
           },
           "created_by": {

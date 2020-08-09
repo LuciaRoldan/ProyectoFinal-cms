@@ -48,6 +48,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "extra_content": {
+      "type": "richtext"
     }
   }
 }
