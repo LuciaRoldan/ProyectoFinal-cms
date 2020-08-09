@@ -527,9 +527,6 @@
           "title": {
             "type": "string"
           },
-          "extra_content": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
@@ -848,9 +845,6 @@
         ],
         "properties": {
           "title": {
-            "type": "string"
-          },
-          "extra_content": {
             "type": "string"
           },
           "description": {
