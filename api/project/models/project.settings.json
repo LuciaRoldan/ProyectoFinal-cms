@@ -13,10 +13,7 @@
       "type": "string",
       "required": true
     },
-    "subtitle": {
-      "type": "string"
-    },
-    "summary": {
+    "extraContent": {
       "type": "richtext"
     },
     "description": {
