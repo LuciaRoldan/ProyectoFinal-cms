@@ -13,7 +13,7 @@
       "type": "string",
       "required": true
     },
-    "extraContent": {
+    "extra_content": {
       "type": "richtext"
     },
     "description": {

@@ -527,7 +527,7 @@
           "title": {
             "type": "string"
           },
-          "extraContent": {
+          "extra_content": {
             "type": "string"
           },
           "description": {
@@ -850,7 +850,7 @@
           "title": {
             "type": "string"
           },
-          "extraContent": {
+          "extra_content": {
             "type": "string"
           },
           "description": {
