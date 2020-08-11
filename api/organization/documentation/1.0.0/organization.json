@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/author-refs": {
+    "/organizations": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Organization"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Author-ref"
+          "Organization"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Organization"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Author-ref"
+          "Organization"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthor-ref"
+                "$ref": "#/components/schemas/NewOrganization"
               }
             }
           }
         }
       }
     },
-    "/author-refs/count": {
+    "/organizations/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Author-ref"
+          "Organization"
         ],
         "parameters": []
       }
     },
-    "/author-refs/{id}": {
+    "/organizations/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Organization"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Author-ref"
+          "Organization"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Organization"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Author-ref"
+          "Organization"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthor-ref"
+                "$ref": "#/components/schemas/NewOrganization"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Author-ref"
+          "Organization"
         ],
         "parameters": [
           {
@@ -527,27 +514,19 @@
   },
   "components": {
     "schemas": {
-      "Author-ref": {
+      "Organization": {
         "required": [
           "id",
-          "username",
-          "full_name",
-          "user_id"
+          "display_name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "username": {
+          "display_name": {
             "type": "string"
           },
-          "full_name": {
-            "type": "string"
-          },
-          "profile_url": {
-            "type": "string"
-          },
-          "user_id": {
+          "name": {
             "type": "string"
           },
           "created_by": {
@@ -640,23 +619,15 @@
           }
         }
       },
-      "NewAuthor-ref": {
+      "NewOrganization": {
         "required": [
-          "username",
-          "full_name",
-          "user_id"
+          "display_name"
         ],
         "properties": {
-          "username": {
+          "display_name": {
             "type": "string"
           },
-          "full_name": {
-            "type": "string"
-          },
-          "profile_url": {
-            "type": "string"
-          },
-          "user_id": {
+          "name": {
             "type": "string"
           },
           "created_by": {
@@ -669,5 +640,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Organization"
+    }
+  ]
 }

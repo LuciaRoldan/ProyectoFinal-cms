@@ -602,7 +602,10 @@
           },
           "author_refs": {
             "required": [
-              "id"
+              "id",
+              "username",
+              "full_name",
+              "user_id"
             ],
             "properties": {
               "id": {
@@ -615,6 +618,9 @@
                 "type": "string"
               },
               "profile_url": {
+                "type": "string"
+              },
+              "user_id": {
                 "type": "string"
               },
               "created_by": {

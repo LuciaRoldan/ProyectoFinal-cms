@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/project-refs",
+      "handler": "project-ref.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/project-refs/count",
+      "handler": "project-ref.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/project-refs/:id",
+      "handler": "project-ref.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/project-refs",
+      "handler": "project-ref.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/project-refs/:id",
+      "handler": "project-ref.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/project-refs/:id",
+      "handler": "project-ref.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

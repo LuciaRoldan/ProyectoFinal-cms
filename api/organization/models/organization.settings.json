@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizations",
+  "info": {
+    "name": "Organization"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "display_name": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

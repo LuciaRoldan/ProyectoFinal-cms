@@ -10,13 +10,23 @@
   },
   "attributes": {
     "username": {
-      "type": "string"
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": true
     },
     "full_name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "profile_url": {
       "type": "string"
+    },
+    "user_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }
