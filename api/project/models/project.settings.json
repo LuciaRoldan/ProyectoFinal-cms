@@ -59,6 +59,11 @@
     },
     "organization": {
       "model": "organization"
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "array.tags"
     }
   }
 }
