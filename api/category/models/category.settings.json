@@ -15,11 +15,18 @@
     },
     "tag_name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true,
+      "regex": "\\w+"
     },
     "image_url": {
       "type": "string",
       "required": true
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "array.tags"
     }
   }
 }

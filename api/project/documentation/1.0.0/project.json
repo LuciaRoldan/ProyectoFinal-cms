@@ -676,6 +676,9 @@
               "image_url": {
                 "type": "string"
               },
+              "tags": {
+                "type": "component"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -756,6 +759,46 @@
           },
           "extra_content": {
             "type": "string"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "raw_document": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "organization": {
+            "required": [
+              "id",
+              "display_name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "display_name": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "created_by": {
             "required": [
@@ -872,6 +915,26 @@
             "type": "string"
           },
           "extra_content": {
+            "type": "string"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "raw_document": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "organization": {
             "type": "string"
           },
           "created_by": {

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_array_documents",
+  "info": {
+    "name": "Document",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "raw_document": {
+      "type": "text"
+    }
+  }
+}
