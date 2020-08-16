@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/projects": {
+    "/documentations": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Project"
+                    "$ref": "#/components/schemas/Documentation"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Documentation"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Documentation"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Documentation"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewDocumentation"
               }
             }
           }
         }
       }
     },
-    "/projects/count": {
+    "/documentations/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Documentation"
         ],
         "parameters": []
       }
     },
-    "/projects/{id}": {
+    "/documentations/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Documentation"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Documentation"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Documentation"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Documentation"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewDocumentation"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Documentation"
         ],
         "parameters": [
           {
@@ -514,262 +514,16 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "Documentation": {
         "required": [
-          "id",
-          "title",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "file_name": {
             "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "creation_date": {
-            "type": "string"
-          },
-          "poster": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "author_refs": {
-            "required": [
-              "id",
-              "username",
-              "full_name",
-              "user_id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "full_name": {
-                "type": "string"
-              },
-              "profile_url": {
-                "type": "string"
-              },
-              "user_id": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "supervisor_refs": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "profile_url": {
-                "type": "string"
-              },
-              "full_name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id",
-              "name",
-              "tag_name",
-              "image_url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "tag_name": {
-                "type": "string"
-              },
-              "image_url": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "extra_content": {
-            "type": "string"
-          },
-          "documents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "raw_document": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "organization": {
-            "required": [
-              "id",
-              "display_name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "display_name": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "tag_name",
-                "display_name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "tag_name": {
-                  "type": "string"
-                },
-                "display_name": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "documentation": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "file_name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "created_by": {
             "required": [
@@ -861,76 +615,9 @@
           }
         }
       },
-      "NewProject": {
-        "required": [
-          "title",
-          "description"
-        ],
+      "NewDocumentation": {
         "properties": {
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "creation_date": {
-            "type": "string"
-          },
-          "author_refs": {
-            "type": "string"
-          },
-          "supervisor_refs": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "extra_content": {
-            "type": "string"
-          },
-          "documents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "raw_document": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "organization": {
-            "type": "string"
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "tag_name",
-                "display_name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "tag_name": {
-                  "type": "string"
-                },
-                "display_name": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "documentation": {
+          "file_name": {
             "type": "string"
           },
           "created_by": {
@@ -945,7 +632,7 @@
   },
   "tags": [
     {
-      "name": "Project"
+      "name": "Documentation"
     }
   ]
 }

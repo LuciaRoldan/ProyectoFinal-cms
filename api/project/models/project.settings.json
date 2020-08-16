@@ -38,17 +38,6 @@
     "category": {
       "model": "category"
     },
-    "documentation": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "extra_content": {
       "type": "richtext"
     },
@@ -64,6 +53,9 @@
       "type": "component",
       "repeatable": true,
       "component": "array.tags"
+    },
+    "documentation": {
+      "collection": "documentation"
     }
   }
 }
