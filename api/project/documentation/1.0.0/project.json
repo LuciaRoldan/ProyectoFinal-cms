@@ -690,23 +690,6 @@
           "extra_content": {
             "type": "string"
           },
-          "documents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "raw_document": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "organization": {
             "required": [
               "id",
@@ -893,23 +876,6 @@
           },
           "extra_content": {
             "type": "string"
-          },
-          "documents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "raw_document": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "organization": {
             "type": "string"

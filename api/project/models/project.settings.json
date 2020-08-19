@@ -41,11 +41,6 @@
     "extra_content": {
       "type": "richtext"
     },
-    "documents": {
-      "type": "component",
-      "repeatable": true,
-      "component": "array.document"
-    },
     "organization": {
       "model": "organization"
     },
