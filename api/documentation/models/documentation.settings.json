@@ -11,6 +11,13 @@
   "attributes": {
     "file_name": {
       "type": "string"
+    },
+    "drive_id": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text",
+      "private": true
     }
   }
 }

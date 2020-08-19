@@ -525,6 +525,9 @@
           "file_name": {
             "type": "string"
           },
+          "drive_id": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -618,6 +621,12 @@
       "NewDocumentation": {
         "properties": {
           "file_name": {
+            "type": "string"
+          },
+          "drive_id": {
+            "type": "string"
+          },
+          "content": {
             "type": "string"
           },
           "created_by": {
