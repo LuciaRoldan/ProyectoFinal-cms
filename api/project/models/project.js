@@ -34,39 +34,6 @@ function findProjectRef(projectId) {
 
 module.exports = {
   lifecycles: {
-    async beforeUpdate(data, params) {
-      const docs = await Promise.all(
-        params.documentation.map((d) =>
-          strapi.query("documentation").create({
-            file_name: d.file_name,
-            drive_id: d.drive_id,
-            content: d.content,
-          })
-        )
-      );
-
-      console.log(docs);
-      const [documentation, author_refs, supervisor_refs, tags] = await strapi
-        .query("project")
-        .findOne({ _id: data._id })
-        .then((project) => [
-          project.documentation,
-          project.author_refs,
-          project.supervisor_refs,
-          project.tags,
-        ])
-        .catch(console.error);
-
-      params.documentation = documentation.concat(docs ? docs : []);
-      params.author_refs = author_refs.concat(
-        params.author_refs ? params.author_refs : []
-      );
-      params.supervisor_refs = supervisor_refs.concat(
-        params.supervisor_refs ? params.supervisor_refs : []
-      );
-      params.tags = tags.concat(params.tags ? params.tags : []);
-      console.log(params);
-    },
     async afterCreate(data) {
       createProjectRef(data)
         .then((ref) =>
