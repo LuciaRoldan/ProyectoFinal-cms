@@ -19,4 +19,20 @@ module.exports = {
         { documentation: project.documentation.concat(doc) }
       );
   },
+  deleteDocument: async (ctx) => {
+    await strapi.query("documentation").delete({ id: ctx.params.document_id });
+
+    const project = await strapi
+      .query("project")
+      .findOne({ id: ctx.params.project_id });
+
+    return strapi.query("project").update(
+      { id: ctx.params.project_id },
+      {
+        documentation: project.documentation.filter(
+          (doc) => doc.id != ctx.params.document_id
+        ),
+      }
+    );
+  },
 };

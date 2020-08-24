@@ -50,6 +50,14 @@
     },
     {
       "method": "DELETE",
+      "path": "/projects/:project_id/documents/:document_id",
+      "handler": "project.deleteDocument",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
       "path": "/projects/:id",
       "handler": "project.delete",
       "config": {
