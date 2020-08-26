@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/supervisors",
+      "handler": "supervisor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/supervisors/count",
+      "handler": "supervisor.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/supervisors/:id",
+      "handler": "supervisor.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/supervisors",
+      "handler": "supervisor.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/supervisors/:id",
+      "handler": "supervisor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/supervisors/:id",
+      "handler": "supervisor.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supervisors",
+  "info": {
+    "name": "Supervisor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "full_name": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "organizations": {
+      "collection": "organization"
+    },
+    "project_refs": {
+      "collection": "project-ref"
+    },
+    "profile_pic_url": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
