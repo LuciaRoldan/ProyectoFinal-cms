@@ -18,10 +18,7 @@
     "organizations": {
       "collection": "organization"
     },
-    "project_refs": {
-      "collection": "project-ref"
-    },
-    "profile_pic_url": {
+    "profile_pic": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -29,6 +26,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "projects": {
+      "collection": "project",
+      "via": "supervisors"
     }
   }
 }

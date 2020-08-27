@@ -551,7 +551,7 @@
               }
             }
           },
-          "profile_pic_url": {
+          "profile_pic": {
             "required": [
               "id",
               "name",
@@ -618,27 +618,63 @@
               }
             }
           },
-          "project_refs": {
-            "required": [
-              "id",
-              "project_id",
-              "project_name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "project_id": {
-                "type": "string"
-              },
-              "project_name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+          "projects": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "creation_date": {
+                  "type": "string"
+                },
+                "poster": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "extra_content": {
+                  "type": "string"
+                },
+                "organization": {
+                  "type": "string"
+                },
+                "tags": {
+                  "type": "component"
+                },
+                "documentation": {
+                  "type": "string"
+                },
+                "authors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "supervisors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -743,8 +779,11 @@
           "organizations": {
             "type": "string"
           },
-          "project_refs": {
-            "type": "string"
+          "projects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

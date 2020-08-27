@@ -29,12 +29,6 @@
       "plugin": "upload",
       "required": false
     },
-    "author_refs": {
-      "collection": "author-ref"
-    },
-    "supervisor_refs": {
-      "collection": "supervisor-ref"
-    },
     "category": {
       "model": "category"
     },
@@ -51,6 +45,16 @@
     },
     "documentation": {
       "collection": "documentation"
+    },
+    "authors": {
+      "via": "projects",
+      "collection": "author",
+      "dominant": true
+    },
+    "supervisors": {
+      "via": "projects",
+      "collection": "supervisor",
+      "dominant": true
     }
   }
 }

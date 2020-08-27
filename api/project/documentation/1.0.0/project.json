@@ -746,62 +746,6 @@
               }
             }
           },
-          "author_refs": {
-            "required": [
-              "id",
-              "username",
-              "full_name",
-              "user_id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "full_name": {
-                "type": "string"
-              },
-              "profile_url": {
-                "type": "string"
-              },
-              "user_id": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "supervisor_refs": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "profile_url": {
-                "type": "string"
-              },
-              "full_name": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "category": {
             "required": [
               "id",
@@ -903,6 +847,80 @@
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "organizations": {
+                  "type": "string"
+                },
+                "profile_pic": {
+                  "type": "string"
+                },
+                "projects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "supervisors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "organizations": {
+                  "type": "string"
+                },
+                "profile_pic": {
+                  "type": "string"
+                },
+                "projects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -1011,12 +1029,6 @@
           "creation_date": {
             "type": "string"
           },
-          "author_refs": {
-            "type": "string"
-          },
-          "supervisor_refs": {
-            "type": "string"
-          },
           "category": {
             "type": "string"
           },
@@ -1050,6 +1062,18 @@
           },
           "documentation": {
             "type": "string"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "supervisors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
