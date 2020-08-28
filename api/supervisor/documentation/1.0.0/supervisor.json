@@ -703,6 +703,23 @@
               }
             }
           },
+          "contact": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "mail": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -829,6 +846,23 @@
                 "social_profile_url": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "contact": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "mail": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
               }
             }
           },

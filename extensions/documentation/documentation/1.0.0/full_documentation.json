@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/28/2020 11:00:02 AM"
+    "x-generation-date": "08/28/2020 8:21:13 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5547,6 +5547,23 @@
               }
             }
           },
+          "contact": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "mail": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -5673,6 +5690,23 @@
                 "social_profile_url": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "contact": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "mail": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
               }
             }
           },
@@ -6400,6 +6434,9 @@
                 "socials": {
                   "type": "component"
                 },
+                "contact": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -6438,6 +6475,9 @@
                   }
                 },
                 "socials": {
+                  "type": "component"
+                },
+                "contact": {
                   "type": "component"
                 },
                 "created_by": {
@@ -6797,6 +6837,23 @@
               }
             }
           },
+          "contact": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "mail": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -6923,6 +6980,23 @@
                 "social_profile_url": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "contact": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "mail": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
               }
             }
           },

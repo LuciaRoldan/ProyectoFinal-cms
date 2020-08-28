@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_json_contacts",
+  "info": {
+    "name": "Contact",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "mail": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

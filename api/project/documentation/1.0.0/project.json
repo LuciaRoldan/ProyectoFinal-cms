@@ -884,6 +884,9 @@
                 "socials": {
                   "type": "component"
                 },
+                "contact": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -922,6 +925,9 @@
                   }
                 },
                 "socials": {
+                  "type": "component"
+                },
+                "contact": {
                   "type": "component"
                 },
                 "created_by": {
