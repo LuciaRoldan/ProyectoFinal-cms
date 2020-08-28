@@ -795,6 +795,9 @@
               "name": {
                 "type": "string"
               },
+              "icon": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -878,6 +881,9 @@
                     "type": "string"
                   }
                 },
+                "socials": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -914,6 +920,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "socials": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"

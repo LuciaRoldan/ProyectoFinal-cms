@@ -30,6 +30,11 @@
     "projects": {
       "collection": "project",
       "via": "authors"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "array.social"
     }
   }
 }

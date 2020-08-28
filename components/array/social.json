@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_array_socials",
+  "info": {
+    "name": "Social",
+    "icon": "list-ol"
+  },
+  "options": {},
+  "attributes": {
+    "social_name": {
+      "type": "string",
+      "required": true
+    },
+    "social_profile_url": {
+      "type": "string",
+      "unique": false,
+      "private": true
+    }
+  }
+}

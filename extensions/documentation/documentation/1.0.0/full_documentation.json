@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/27/2020 4:28:48 PM"
+    "x-generation-date": "08/27/2020 10:58:27 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5387,6 +5387,9 @@
               "name": {
                 "type": "string"
               },
+              "icon": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -5522,6 +5525,27 @@
               }
             }
           },
+          "socials": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "social_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "social_name": {
+                  "type": "string"
+                },
+                "social_profile_url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -5627,6 +5651,27 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "socials": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "social_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "social_name": {
+                  "type": "string"
+                },
+                "social_profile_url": {
+                  "type": "string"
+                }
+              }
             }
           },
           "created_by": {
@@ -5953,6 +5998,73 @@
           "name": {
             "type": "string"
           },
+          "icon": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -6197,6 +6309,9 @@
               "name": {
                 "type": "string"
               },
+              "icon": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6280,6 +6395,9 @@
                     "type": "string"
                   }
                 },
+                "socials": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -6316,6 +6434,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "socials": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"
@@ -6514,6 +6635,9 @@
               "name": {
                 "type": "string"
               },
+              "icon": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6649,6 +6773,27 @@
               }
             }
           },
+          "socials": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "social_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "social_name": {
+                  "type": "string"
+                },
+                "social_profile_url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -6754,6 +6899,27 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "socials": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "social_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "social_name": {
+                  "type": "string"
+                },
+                "social_profile_url": {
+                  "type": "string"
+                }
+              }
             }
           },
           "created_by": {

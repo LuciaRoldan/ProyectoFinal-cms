@@ -543,6 +543,9 @@
               "name": {
                 "type": "string"
               },
+              "icon": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -678,6 +681,27 @@
               }
             }
           },
+          "socials": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "social_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "social_name": {
+                  "type": "string"
+                },
+                "social_profile_url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -783,6 +807,27 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "socials": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "social_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "social_name": {
+                  "type": "string"
+                },
+                "social_profile_url": {
+                  "type": "string"
+                }
+              }
             }
           },
           "created_by": {
