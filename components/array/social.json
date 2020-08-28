@@ -13,7 +13,8 @@
     "social_profile_url": {
       "type": "string",
       "unique": false,
-      "private": true
+      "private": false,
+      "required": true
     }
   }
 }
