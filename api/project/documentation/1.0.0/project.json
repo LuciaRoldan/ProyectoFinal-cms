@@ -942,9 +942,9 @@
               }
             }
           },
-          "views": {
+          "vistas": {
             "type": "integer",
-            "default": "0"
+            "default": 0
           },
           "created_by": {
             "required": [
@@ -1097,9 +1097,9 @@
               "type": "string"
             }
           },
-          "views": {
+          "vistas": {
             "type": "integer",
-            "default": "0"
+            "default": 0
           },
           "created_by": {
             "type": "string"
