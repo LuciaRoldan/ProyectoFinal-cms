@@ -7,9 +7,13 @@
 
 module.exports = {
   lifecycles: {
-    async afterFindOne(data) {
-      
+    async afterFindOne(result, params, populate) {
+      strapi
+        .query("project")
+        .update(
+          { _id: result.id },
+          { vistas: result.vistas + 1 }
+        );
     }
   }
-
 };

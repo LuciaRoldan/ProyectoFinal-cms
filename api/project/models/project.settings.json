@@ -56,9 +56,9 @@
       "via": "projects",
       "dominant": true
     },
-    "views": {
-      "type": "biginteger",
-      "default": "0"
+    "vistas": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
