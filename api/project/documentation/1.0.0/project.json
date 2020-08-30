@@ -872,9 +872,6 @@
                 "organizations": {
                   "type": "string"
                 },
-                "profile_pic": {
-                  "type": "string"
-                },
                 "projects": {
                   "type": "array",
                   "items": {
@@ -888,6 +885,9 @@
                   "type": "string"
                 },
                 "phone": {
+                  "type": "string"
+                },
+                "profile_pic_url": {
                   "type": "string"
                 },
                 "created_by": {
@@ -918,9 +918,6 @@
                 "organizations": {
                   "type": "string"
                 },
-                "profile_pic": {
-                  "type": "string"
-                },
                 "projects": {
                   "type": "array",
                   "items": {
@@ -932,6 +929,9 @@
                 },
                 "contact": {
                   "type": "component"
+                },
+                "profile_pic_url": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

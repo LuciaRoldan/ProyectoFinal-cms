@@ -18,15 +18,6 @@
     "organizations": {
       "collection": "organization"
     },
-    "profile_pic": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "projects": {
       "collection": "project",
       "via": "supervisors"
@@ -40,6 +31,9 @@
       "type": "component",
       "repeatable": false,
       "component": "json.contact"
+    },
+    "profile_pic_url": {
+      "type": "string"
     }
   }
 }
