@@ -942,6 +942,10 @@
               }
             }
           },
+          "views": {
+            "type": "integer",
+            "default": "0"
+          },
           "created_by": {
             "required": [
               "id",
@@ -1092,6 +1096,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "views": {
+            "type": "integer",
+            "default": "0"
           },
           "created_by": {
             "type": "string"

@@ -5449,6 +5449,9 @@
                     "type": "string"
                   }
                 },
+                "views": {
+                  "type": "integer"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -6409,6 +6412,10 @@
               }
             }
           },
+          "views": {
+            "type": "integer",
+            "default": "0"
+          },
           "created_by": {
             "required": [
               "id",
@@ -6560,6 +6567,10 @@
               "type": "string"
             }
           },
+          "views": {
+            "type": "integer",
+            "default": "0"
+          },
           "created_by": {
             "type": "string"
           },
@@ -6658,6 +6669,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "views": {
+                  "type": "integer"
                 },
                 "created_by": {
                   "type": "string"

@@ -605,6 +605,9 @@
                     "type": "string"
                   }
                 },
+                "views": {
+                  "type": "integer"
+                },
                 "created_by": {
                   "type": "string"
                 },

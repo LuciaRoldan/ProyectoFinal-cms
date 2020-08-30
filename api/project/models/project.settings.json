@@ -47,14 +47,18 @@
       "collection": "documentation"
     },
     "authors": {
-      "via": "projects",
       "collection": "author",
+      "via": "projects",
       "dominant": true
     },
     "supervisors": {
-      "via": "projects",
       "collection": "supervisor",
+      "via": "projects",
       "dominant": true
+    },
+    "views": {
+      "type": "biginteger",
+      "default": "0"
     }
   }
 }
