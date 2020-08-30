@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/30/2020 4:22:38 PM"
+    "x-generation-date": "08/30/2020 8:43:24 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5360,7 +5360,9 @@
     "schemas": {
       "Author": {
         "required": [
-          "id"
+          "id",
+          "google_token",
+          "google_user_id"
         ],
         "properties": {
           "id": {
@@ -5647,6 +5649,10 @@
         }
       },
       "NewAuthor": {
+        "required": [
+          "google_token",
+          "google_user_id"
+        ],
         "properties": {
           "username": {
             "type": "string"
@@ -5689,6 +5695,12 @@
             "type": "string"
           },
           "phone": {
+            "type": "string"
+          },
+          "google_token": {
+            "type": "string"
+          },
+          "google_user_id": {
             "type": "string"
           },
           "created_by": {
@@ -6388,7 +6400,9 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "google_token",
+                "google_user_id"
               ],
               "properties": {
                 "id": {
@@ -6419,6 +6433,12 @@
                   "type": "string"
                 },
                 "phone": {
+                  "type": "string"
+                },
+                "google_token": {
+                  "type": "string"
+                },
+                "google_user_id": {
                   "type": "string"
                 },
                 "created_by": {
@@ -6463,6 +6483,12 @@
                 },
                 "contact": {
                   "type": "component"
+                },
+                "google_token": {
+                  "type": "string"
+                },
+                "google_user_id": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -6849,6 +6875,12 @@
               }
             }
           },
+          "google_token": {
+            "type": "string"
+          },
+          "google_user_id": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -6994,6 +7026,12 @@
                 "type": "string"
               }
             }
+          },
+          "google_token": {
+            "type": "string"
+          },
+          "google_user_id": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

@@ -857,7 +857,9 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "google_token",
+                "google_user_id"
               ],
               "properties": {
                 "id": {
@@ -888,6 +890,12 @@
                   "type": "string"
                 },
                 "phone": {
+                  "type": "string"
+                },
+                "google_token": {
+                  "type": "string"
+                },
+                "google_user_id": {
                   "type": "string"
                 },
                 "created_by": {
@@ -932,6 +940,12 @@
                 },
                 "contact": {
                   "type": "component"
+                },
+                "google_token": {
+                  "type": "string"
+                },
+                "google_user_id": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

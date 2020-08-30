@@ -723,6 +723,12 @@
               }
             }
           },
+          "google_token": {
+            "type": "string"
+          },
+          "google_user_id": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -868,6 +874,12 @@
                 "type": "string"
               }
             }
+          },
+          "google_token": {
+            "type": "string"
+          },
+          "google_user_id": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

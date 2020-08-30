@@ -516,7 +516,9 @@
     "schemas": {
       "Author": {
         "required": [
-          "id"
+          "id",
+          "google_token",
+          "google_user_id"
         ],
         "properties": {
           "id": {
@@ -803,6 +805,10 @@
         }
       },
       "NewAuthor": {
+        "required": [
+          "google_token",
+          "google_user_id"
+        ],
         "properties": {
           "username": {
             "type": "string"
@@ -845,6 +851,12 @@
             "type": "string"
           },
           "phone": {
+            "type": "string"
+          },
+          "google_token": {
+            "type": "string"
+          },
+          "google_user_id": {
             "type": "string"
           },
           "created_by": {

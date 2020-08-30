@@ -28,8 +28,8 @@
       "required": false
     },
     "projects": {
-      "via": "supervisors",
-      "collection": "project"
+      "collection": "project",
+      "via": "supervisors"
     },
     "socials": {
       "type": "component",
@@ -40,6 +40,12 @@
       "type": "component",
       "repeatable": false,
       "component": "json.contact"
+    },
+    "google_token": {
+      "type": "string"
+    },
+    "google_user_id": {
+      "type": "string"
     }
   }
 }

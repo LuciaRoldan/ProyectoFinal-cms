@@ -28,8 +28,8 @@
       "required": false
     },
     "projects": {
-      "via": "authors",
-      "collection": "project"
+      "collection": "project",
+      "via": "authors"
     },
     "socials": {
       "type": "component",
@@ -41,6 +41,18 @@
     },
     "phone": {
       "type": "string"
+    },
+    "google_token": {
+      "type": "string",
+      "private": true,
+      "unique": true,
+      "required": true
+    },
+    "google_user_id": {
+      "type": "string",
+      "private": true,
+      "required": true,
+      "unique": true
     }
   }
 }
