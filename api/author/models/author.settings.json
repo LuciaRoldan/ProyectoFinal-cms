@@ -18,6 +18,15 @@
     "organizations": {
       "collection": "organization"
     },
+    "profile_pic": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
     "projects": {
       "via": "authors",
       "collection": "project"
@@ -31,9 +40,6 @@
       "type": "string"
     },
     "phone": {
-      "type": "string"
-    },
-    "profile_pic_url": {
       "type": "string"
     }
   }
