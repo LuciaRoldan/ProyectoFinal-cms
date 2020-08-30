@@ -28,8 +28,8 @@
       "required": false
     },
     "projects": {
-      "collection": "project",
-      "via": "authors"
+      "via": "authors",
+      "collection": "project"
     },
     "socials": {
       "type": "component",
