@@ -884,8 +884,11 @@
                 "socials": {
                   "type": "component"
                 },
-                "contact": {
-                  "type": "component"
+                "mail": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

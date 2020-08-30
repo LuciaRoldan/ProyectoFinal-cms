@@ -703,22 +703,11 @@
               }
             }
           },
-          "contact": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "mail": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              }
-            }
+          "mail": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
           },
           "created_by": {
             "required": [
@@ -849,22 +838,11 @@
               }
             }
           },
-          "contact": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "mail": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              }
-            }
+          "mail": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
