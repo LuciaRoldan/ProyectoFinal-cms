@@ -706,27 +706,10 @@
               }
             }
           },
-          "contact": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "mail": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              }
-            }
-          },
-          "google_token": {
+          "mail": {
             "type": "string"
           },
-          "google_user_id": {
+          "phone": {
             "type": "string"
           },
           "created_by": {
@@ -858,27 +841,16 @@
               }
             }
           },
-          "contact": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "mail": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              }
-            }
-          },
           "google_token": {
             "type": "string"
           },
           "google_user_id": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "string"
+          },
+          "phone": {
             "type": "string"
           },
           "created_by": {

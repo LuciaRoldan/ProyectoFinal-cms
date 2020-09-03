@@ -37,7 +37,8 @@
       "component": "array.social"
     },
     "mail": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "phone": {
       "type": "string"

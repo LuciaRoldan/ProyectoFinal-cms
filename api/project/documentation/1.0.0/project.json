@@ -938,13 +938,16 @@
                 "socials": {
                   "type": "component"
                 },
-                "contact": {
-                  "type": "component"
-                },
                 "google_token": {
                   "type": "string"
                 },
                 "google_user_id": {
+                  "type": "string"
+                },
+                "mail": {
+                  "type": "string"
+                },
+                "phone": {
                   "type": "string"
                 },
                 "created_by": {

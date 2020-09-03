@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "08/30/2020 8:43:24 PM"
+    "x-generation-date": "09/02/2020 10:42:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6481,13 +6481,16 @@
                 "socials": {
                   "type": "component"
                 },
-                "contact": {
-                  "type": "component"
-                },
                 "google_token": {
                   "type": "string"
                 },
                 "google_user_id": {
+                  "type": "string"
+                },
+                "mail": {
+                  "type": "string"
+                },
+                "phone": {
                   "type": "string"
                 },
                 "created_by": {
@@ -6858,27 +6861,10 @@
               }
             }
           },
-          "contact": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "mail": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              }
-            }
-          },
-          "google_token": {
+          "mail": {
             "type": "string"
           },
-          "google_user_id": {
+          "phone": {
             "type": "string"
           },
           "created_by": {
@@ -7010,27 +6996,16 @@
               }
             }
           },
-          "contact": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "mail": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              }
-            }
-          },
           "google_token": {
             "type": "string"
           },
           "google_user_id": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "string"
+          },
+          "phone": {
             "type": "string"
           },
           "created_by": {
