@@ -672,7 +672,7 @@
                     "type": "string"
                   }
                 },
-                "vistas": {
+                "views": {
                   "type": "integer"
                 },
                 "created_by": {

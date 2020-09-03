@@ -28,8 +28,8 @@
       "required": false
     },
     "projects": {
-      "collection": "project",
-      "via": "supervisors"
+      "via": "supervisors",
+      "collection": "project"
     },
     "socials": {
       "type": "component",
