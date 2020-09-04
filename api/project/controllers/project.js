@@ -35,48 +35,49 @@ module.exports = {
       }
     );
   },
-  createAuthor: async (ctx) => {
-    const author = await strapi
+  addAuthors: async (ctx) => {
+    const authors = await strapi
       .query("author")
-      .find({ _id: ctx.request.body.author_id });
+      .find({ _id: ctx.request.body.items.some((a) => _id == a) });
 
     return strapi
       .query("project")
       .update(
         { _id: ctx.params.project_id },
-        { authors: project.authors.concat(author) }
+        { authors: project.authors.concat(authors) }
       );
   },
-  createSupervisor: async (ctx) => {
-    const supervisor = await strapi
+  addSupervisors: async (ctx) => {
+    const supervisors = await strapi
       .query("supervisor")
-      .find({ _id: ctx.request.body.supervisor_id });
+      .find({ _id: ctx.request.body.items.some((s) => _id == s) });
 
     return strapi
       .query("project")
       .update(
         { _id: ctx.params.project_id },
-        { authors: project.supervisors.concat(supervisor) }
+        { authors: project.supervisors.concat(supervisors) }
       );
   },
-  deleteAuthor: async (ctx) => {
-    return strapi
-      .query("project")
-      .update(
-        { _id: ctx.params.project_id },
-        { authors: project.authors.filter((a) => a.id != ctx.params.author_id) }
-      );
+  removeAuthors: async (ctx) => {
+    const ids = request.query.items.split(",");
+    return strapi.query("project").update(
+      { _id: ctx.params.project_id },
+      {
+        authors: project.authors.filter((a) => ids.some((it) => it == a.id)),
+      }
+    );
   },
-  deleteSupervisor: async (ctx) => {
-    return strapi
-      .query("project")
-      .update(
-        { _id: ctx.params.project_id },
-        {
-          supervisor_id: project.supervisors.filter(
-            (s) => s.id != ctx.params.supervisor_id
-          ),
-        }
-      );
+  removeSupervisors: async (ctx) => {
+    const ids = request.query.items.split(",");
+
+    return strapi.query("project").update(
+      { _id: ctx.params.project_id },
+      {
+        supervisor_id: project.supervisors.filter((s) =>
+          ids.some((it) => it == s.id)
+        ),
+      }
+    );
   },
 };
