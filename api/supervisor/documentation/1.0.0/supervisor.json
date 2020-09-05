@@ -626,8 +626,7 @@
             "items": {
               "required": [
                 "id",
-                "title",
-                "description"
+                "title"
               ],
               "properties": {
                 "id": {

@@ -931,8 +931,7 @@
       "Project": {
         "required": [
           "id",
-          "title",
-          "description"
+          "title"
         ],
         "properties": {
           "id": {
@@ -1323,8 +1322,7 @@
       },
       "NewProject": {
         "required": [
-          "title",
-          "description"
+          "title"
         ],
         "properties": {
           "title": {
