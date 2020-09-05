@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pending_supervisors",
+  "info": {
+    "name": "PendingSupervisor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "mail": {
+      "type": "email"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "private": true
+    },
+    "google_user_id": {
+      "type": "string"
+    }
+  }
+}

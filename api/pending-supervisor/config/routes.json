@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pending-supervisors",
+      "handler": "pending-supervisor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pending-supervisors/count",
+      "handler": "pending-supervisor.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pending-supervisors/:id",
+      "handler": "pending-supervisor.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pending-supervisors",
+      "handler": "pending-supervisor.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pending-supervisors/:id",
+      "handler": "pending-supervisor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pending-supervisors/:id",
+      "handler": "pending-supervisor.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
