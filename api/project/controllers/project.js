@@ -38,7 +38,10 @@ module.exports = {
   addAuthors: async (ctx) => {
     const authors = await strapi
       .query("author")
-      .find({ _id: ctx.request.body.items.some((a) => _id == a) });
+      .find({ id_in: ctx.request.body.items });
+    const project = await strapi
+      .query("project")
+      .findOne({ id: ctx.params.project_id });
 
     return strapi
       .query("project")
@@ -50,32 +53,42 @@ module.exports = {
   addSupervisors: async (ctx) => {
     const supervisors = await strapi
       .query("supervisor")
-      .find({ _id: ctx.request.body.items.some((s) => _id == s) });
+      .find({ id_in: ctx.request.body.items });
+    const project = await strapi
+      .query("project")
+      .findOne({ id: ctx.params.project_id });
 
     return strapi
       .query("project")
       .update(
         { _id: ctx.params.project_id },
-        { authors: project.supervisors.concat(supervisors) }
+        { supervisors: project.supervisors.concat(supervisors) }
       );
   },
   removeAuthors: async (ctx) => {
-    const ids = request.query.items.split(",");
-    return strapi.query("project").update(
-      { _id: ctx.params.project_id },
-      {
-        authors: project.authors.filter((a) => ids.some((it) => it == a.id)),
-      }
-    );
-  },
-  removeSupervisors: async (ctx) => {
-    const ids = request.query.items.split(",");
+    const ids = ctx.request.query.items.split(",");
+    const project = await strapi
+      .query("project")
+      .findOne({ id: ctx.params.project_id });
 
     return strapi.query("project").update(
       { _id: ctx.params.project_id },
       {
-        supervisor_id: project.supervisors.filter((s) =>
-          ids.some((it) => it == s.id)
+        authors: project.authors.filter((a) => !ids.some((it) => it == a.id)),
+      }
+    );
+  },
+  removeSupervisors: async (ctx) => {
+    const ids = ctx.request.query.items.split(",");
+    const project = await strapi
+      .query("project")
+      .findOne({ id: ctx.params.project_id });
+
+    return strapi.query("project").update(
+      { _id: ctx.params.project_id },
+      {
+        supervisors: project.supervisors.filter(
+          (a) => !ids.some((it) => it == a.id)
         ),
       }
     );

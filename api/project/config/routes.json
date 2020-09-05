@@ -82,7 +82,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/projects/:project_id/authors/:author_id",
+      "path": "/projects/:project_id/authors",
       "handler": "project.removeAuthors",
       "config": {
         "policies": []
@@ -90,7 +90,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/projects/:project_id/supervisors/:supervisor_id",
+      "path": "/projects/:project_id/supervisors",
       "handler": "project.removeSupervisors",
       "config": {
         "policies": []
