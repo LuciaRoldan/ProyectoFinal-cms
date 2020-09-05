@@ -10,10 +10,7 @@ module.exports = {
     async afterFindOne(result, params, populate) {
       strapi
         .query("project")
-        .update(
-          { _id: result.id },
-          { vistas: result.vistas + 1 }
-        );
-    }
-  }
+        .update({ _id: result.id }, { views: result.views + 1 });
+    },
+  },
 };

@@ -529,8 +529,7 @@
     "schemas": {
       "Pending-supervisor": {
         "required": [
-          "id",
-          "approved"
+          "id"
         ],
         "properties": {
           "id": {
@@ -636,9 +635,6 @@
         }
       },
       "NewPending-supervisor": {
-        "required": [
-          "approved"
-        ],
         "properties": {
           "mail": {
             "type": "string"

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/05/2020 3:42:58 PM"
+    "x-generation-date": "09/05/2020 4:32:08 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6996,8 +6996,7 @@
       },
       "Pending-supervisor": {
         "required": [
-          "id",
-          "approved"
+          "id"
         ],
         "properties": {
           "id": {
@@ -7103,9 +7102,6 @@
         }
       },
       "NewPending-supervisor": {
-        "required": [
-          "approved"
-        ],
         "properties": {
           "mail": {
             "type": "string"
