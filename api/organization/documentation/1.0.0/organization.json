@@ -596,6 +596,118 @@
               }
             }
           },
+          "authors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "google_token",
+                "google_user_id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "organizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "profile_pic": {
+                  "type": "string"
+                },
+                "projects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "socials": {
+                  "type": "component"
+                },
+                "mail": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "google_token": {
+                  "type": "string"
+                },
+                "google_user_id": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "supervisors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "organizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "profile_pic": {
+                  "type": "string"
+                },
+                "projects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "socials": {
+                  "type": "component"
+                },
+                "google_token": {
+                  "type": "string"
+                },
+                "google_user_id": {
+                  "type": "string"
+                },
+                "mail": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "created_by": {
             "required": [
               "id",
@@ -696,6 +808,18 @@
           },
           "name": {
             "type": "string"
+          },
+          "authors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "supervisors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

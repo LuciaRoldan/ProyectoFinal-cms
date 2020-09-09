@@ -16,7 +16,9 @@
       "type": "string"
     },
     "organizations": {
-      "collection": "organization"
+      "collection": "organization",
+      "via": "authors",
+      "dominant": true
     },
     "profile_pic": {
       "model": "file",
@@ -28,8 +30,8 @@
       "required": false
     },
     "projects": {
-      "via": "authors",
-      "collection": "project"
+      "collection": "project",
+      "via": "authors"
     },
     "socials": {
       "type": "component",

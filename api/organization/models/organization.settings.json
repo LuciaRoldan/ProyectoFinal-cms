@@ -26,6 +26,14 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "authors": {
+      "via": "organizations",
+      "collection": "author"
+    },
+    "supervisors": {
+      "via": "organizations",
+      "collection": "supervisor"
     }
   }
 }

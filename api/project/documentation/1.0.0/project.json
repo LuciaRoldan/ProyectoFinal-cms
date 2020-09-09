@@ -1065,6 +1065,18 @@
               "icon": {
                 "type": "string"
               },
+              "authors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "supervisors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -1139,7 +1151,10 @@
                   "type": "string"
                 },
                 "organizations": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "profile_pic": {
                   "type": "string"
@@ -1191,7 +1206,10 @@
                   "type": "string"
                 },
                 "organizations": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "profile_pic": {
                   "type": "string"

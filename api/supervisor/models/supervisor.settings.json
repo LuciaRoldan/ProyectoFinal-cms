@@ -16,7 +16,9 @@
       "type": "string"
     },
     "organizations": {
-      "collection": "organization"
+      "collection": "organization",
+      "via": "supervisors",
+      "dominant": true
     },
     "profile_pic": {
       "model": "file",
@@ -28,8 +30,8 @@
       "required": false
     },
     "projects": {
-      "via": "supervisors",
-      "collection": "project"
+      "collection": "project",
+      "via": "supervisors"
     },
     "socials": {
       "type": "component",
