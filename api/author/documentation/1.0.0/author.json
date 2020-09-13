@@ -706,7 +706,6 @@
               "type": "object",
               "required": [
                 "id",
-                "social_name",
                 "social_profile_url"
               ],
               "properties": {
@@ -848,7 +847,6 @@
               "type": "object",
               "required": [
                 "id",
-                "social_name",
                 "social_profile_url"
               ],
               "properties": {

@@ -8,7 +8,7 @@
   "attributes": {
     "social_name": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "social_profile_url": {
       "type": "string",
