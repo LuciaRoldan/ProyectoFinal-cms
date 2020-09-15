@@ -43,7 +43,7 @@
     {
       "method": "POST",
       "path": "/projects/:id/documents",
-      "handler": "project.createDocument",
+      "handler": "project.createDocuments",
       "config": {
         "policies": []
       }

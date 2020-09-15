@@ -6,18 +6,36 @@
  */
 
 module.exports = {
-  createDocument: async (ctx) => {
-    const doc = await strapi.query("documentation").create(ctx.request.body);
-    const project = await strapi
-      .query("project")
-      .findOne({ _id: ctx.params.id });
+  createDocuments: async (ctx) => {
+    if (ctx.request.body.items) {
+      const items = ctx.request.body.items;
 
-    return strapi
-      .query("project")
-      .update(
-        { _id: ctx.params.id },
-        { documentation: project.documentation.concat(doc) }
+      const docs = await Promise.all(
+        items.map((i) => strapi.query("documentation").create(i))
       );
+      const project = await strapi
+        .query("proejct")
+        .findOne({ _id: ctx.params.id });
+
+      return strapi
+        .query("project")
+        .update(
+          { _id: ctx.params.id },
+          { documentation: project.documentation.concat(docs) }
+        );
+    } else {
+      const doc = await strapi.query("documentation").create(ctx.request.body);
+      const project = await strapi
+        .query("project")
+        .findOne({ _id: ctx.params.id });
+
+      return strapi
+        .query("project")
+        .update(
+          { _id: ctx.params.id },
+          { documentation: project.documentation.concat(doc) }
+        );
+    }
   },
   deleteDocument: async (ctx) => {
     await strapi.query("documentation").delete({ id: ctx.params.document_id });
