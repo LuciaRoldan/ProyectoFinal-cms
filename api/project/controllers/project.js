@@ -56,10 +56,10 @@ module.exports = {
   deleteDocuments: async (ctx) => {
     const project = await strapi
       .query("project")
-      .findOne({ id: ctx.params.project_id });
+      .findOne({ id: ctx.params.id });
 
-    const project = strapi.query("project").update(
-      { _id: ctx.params.project_id },
+    const updatedProject = await strapi.query("project").update(
+      { _id: ctx.params.id },
       {
         documentation: project.documentation.filter(
           (d) => !ctx.request.body.items.some((it) => it == d.id)
@@ -71,7 +71,7 @@ module.exports = {
       .query("documentation")
       .delete({ id_in: ctx.request.body.items });
 
-    return project;
+    return updatedProject;
   },
   addAuthors: async (ctx) => {
     const authors = await strapi

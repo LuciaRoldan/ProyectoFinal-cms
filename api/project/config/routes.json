@@ -42,6 +42,14 @@
     },
     {
       "method": "POST",
+      "path": "/projects/:id/documents/delete",
+      "handler": "project.deleteDocuments",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
       "path": "/projects/:id/documents",
       "handler": "project.createDocuments",
       "config": {
@@ -52,14 +60,6 @@
       "method": "DELETE",
       "path": "/projects/:project_id/documents/:document_id",
       "handler": "project.deleteDocument",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/projects/:id/documents/delete",
-      "handler": "project.deleteDocuments",
       "config": {
         "policies": []
       }
