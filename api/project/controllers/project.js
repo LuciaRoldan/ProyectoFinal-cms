@@ -14,7 +14,7 @@ module.exports = {
         items.map((i) => strapi.query("documentation").create(i))
       );
       const project = await strapi
-        .query("proejct")
+        .query("project")
         .findOne({ _id: ctx.params.id });
 
       return strapi
@@ -52,6 +52,26 @@ module.exports = {
         ),
       }
     );
+  },
+  deleteDocuments: async (ctx) => {
+    const project = await strapi
+      .query("project")
+      .findOne({ id: ctx.params.project_id });
+
+    const project = strapi.query("project").update(
+      { _id: ctx.params.project_id },
+      {
+        documentation: project.documentation.filter(
+          (d) => !ctx.request.body.items.some((it) => it == d.id)
+        ),
+      }
+    );
+
+    await strapi
+      .query("documentation")
+      .delete({ id_in: ctx.request.body.items });
+
+    return project;
   },
   addAuthors: async (ctx) => {
     const authors = await strapi
