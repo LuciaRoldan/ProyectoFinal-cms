@@ -14,17 +14,22 @@ module.exports = {
           mail: model.mail,
           google_user_id: model.google_user_id,
           full_name: model.full_name,
+          organizations: [model.organization.id],
         };
 
         await strapi.query("supervisor").create(supervisor);
 
-        // TODO: make this work and send the email
-        // await strapi.plugins["email"].services.email.send({
-        //   to: model.mail,
-        //   from: "admin@strapi.io",
-        //   subject: "Mirate ese mail papurri",
-        //   text: `Qué onda perro`,
-        // });
+        await strapi.plugins["email"].services.email.send({
+          to: model.mail,
+          from: "proyeception@gmail.com",
+          subject: "Bienvenido a proyectate!",
+          templateId: "d-f4c3e3cf666b4d9a8999a5b95dcb448a",
+          dynamic_template_data: {
+            name: model.full_name,
+            organization: model.organization.display_name,
+            login: strapi.config.get("server.supervisorLoginUrl"),
+          },
+        });
 
         strapi.query("pending-supervisor").delete({ id: model.id });
       }

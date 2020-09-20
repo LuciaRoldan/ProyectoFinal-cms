@@ -23,6 +23,9 @@
     },
     "google_user_id": {
       "type": "string"
+    },
+    "organization": {
+      "model": "organization"
     }
   }
 }
