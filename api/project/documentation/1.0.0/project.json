@@ -1017,7 +1017,7 @@
           "creation_date": {
             "type": "string"
           },
-          "poster": {
+          "picture": {
             "required": [
               "id",
               "name",

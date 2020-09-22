@@ -20,7 +20,7 @@
     "creation_date": {
       "type": "date"
     },
-    "poster": {
+    "picture": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -47,13 +47,13 @@
       "collection": "documentation"
     },
     "authors": {
-      "via": "projects",
       "collection": "author",
+      "via": "projects",
       "dominant": true
     },
     "supervisors": {
-      "via": "projects",
       "collection": "supervisor",
+      "via": "projects",
       "dominant": true
     },
     "views": {
