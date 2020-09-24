@@ -10,4 +10,8 @@ module.exports = ({ env }) => ({
     "SUPERVISOR_LOGIN_URL",
     "${process.env.SUPERVISOR_LOGIN_URL}"
   ),
+  authorizationTokens: env.array(
+    "AUTHORIZATION_TOKENS",
+    "${process.env.AUTHORIZATION_TOKENS}"
+  ),
 });
