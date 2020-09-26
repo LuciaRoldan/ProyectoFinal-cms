@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/23/2020 9:10:47 PM"
+    "x-generation-date": "09/26/2020 4:50:46 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6434,6 +6434,9 @@
           "phone": {
             "type": "string"
           },
+          "about": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -6579,6 +6582,9 @@
             "type": "string"
           },
           "google_user_id": {
+            "type": "string"
+          },
+          "about": {
             "type": "string"
           },
           "created_by": {
@@ -7020,6 +7026,9 @@
                 "google_user_id": {
                   "type": "string"
                 },
+                "about": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7073,6 +7082,9 @@
                   "type": "string"
                 },
                 "phone": {
+                  "type": "string"
+                },
+                "about": {
                   "type": "string"
                 },
                 "created_by": {
@@ -7628,6 +7640,9 @@
                 "google_user_id": {
                   "type": "string"
                 },
+                "about": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7681,6 +7696,9 @@
                   "type": "string"
                 },
                 "phone": {
+                  "type": "string"
+                },
+                "about": {
                   "type": "string"
                 },
                 "created_by": {
@@ -8069,6 +8087,9 @@
           "phone": {
             "type": "string"
           },
+          "about": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -8210,6 +8231,9 @@
             "type": "string"
           },
           "phone": {
+            "type": "string"
+          },
+          "about": {
             "type": "string"
           },
           "created_by": {

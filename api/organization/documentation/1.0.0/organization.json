@@ -644,6 +644,9 @@
                 "google_user_id": {
                   "type": "string"
                 },
+                "about": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -697,6 +700,9 @@
                   "type": "string"
                 },
                 "phone": {
+                  "type": "string"
+                },
+                "about": {
                   "type": "string"
                 },
                 "created_by": {

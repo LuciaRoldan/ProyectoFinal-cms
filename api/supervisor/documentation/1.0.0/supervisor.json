@@ -725,6 +725,9 @@
           "phone": {
             "type": "string"
           },
+          "about": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -866,6 +869,9 @@
             "type": "string"
           },
           "phone": {
+            "type": "string"
+          },
+          "about": {
             "type": "string"
           },
           "created_by": {

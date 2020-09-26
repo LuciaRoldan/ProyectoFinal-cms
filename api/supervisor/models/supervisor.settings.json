@@ -30,8 +30,8 @@
       "required": false
     },
     "projects": {
-      "via": "supervisors",
-      "collection": "project"
+      "collection": "project",
+      "via": "supervisors"
     },
     "socials": {
       "type": "component",
@@ -53,6 +53,9 @@
     },
     "phone": {
       "type": "string"
+    },
+    "about": {
+      "type": "text"
     }
   }
 }

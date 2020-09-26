@@ -30,8 +30,8 @@
       "required": false
     },
     "projects": {
-      "via": "authors",
-      "collection": "project"
+      "collection": "project",
+      "via": "authors"
     },
     "socials": {
       "type": "component",
@@ -56,6 +56,9 @@
       "private": true,
       "required": true,
       "unique": true
+    },
+    "about": {
+      "type": "text"
     }
   }
 }
