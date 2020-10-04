@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "DELETE",
+      "path": "/supervisors/:supervisor_id/organizations/:organization_id",
+      "handler": "supervisor.leaveOrganization",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
