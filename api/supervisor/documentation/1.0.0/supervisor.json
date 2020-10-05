@@ -764,10 +764,10 @@
                 "views": {
                   "type": "integer"
                 },
-                "keywords": {
-                  "type": "component"
-                },
                 "recommendations": {
+                  "type": "string"
+                },
+                "project_keywords": {
                   "type": "string"
                 },
                 "created_by": {

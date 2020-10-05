@@ -60,13 +60,11 @@
       "type": "integer",
       "default": 0
     },
-    "keywords": {
-      "type": "component",
-      "repeatable": true,
-      "component": "array.keywords"
-    },
     "recommendations": {
       "collection": "project"
+    },
+    "project_keywords": {
+      "collection": "keywords"
     }
   }
 }

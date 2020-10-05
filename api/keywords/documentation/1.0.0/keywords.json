@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/authors": {
+    "/keywords": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the keywords's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve keywords document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Author"
+                    "$ref": "#/components/schemas/Keywords"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "Keywords"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new keywords record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve keywords document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Author"
+                  "$ref": "#/components/schemas/Keywords"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "Keywords"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthor"
+                "$ref": "#/components/schemas/NewKeywords"
               }
             }
           }
         }
       }
     },
-    "/authors/count": {
+    "/keywords/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of keywords documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve keywords document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "Keywords"
         ],
         "parameters": []
       }
     },
-    "/authors/{id}": {
+    "/keywords/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one keywords record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve keywords document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Author"
+                  "$ref": "#/components/schemas/Keywords"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "Keywords"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single keywords record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve keywords document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Author"
+                  "$ref": "#/components/schemas/Keywords"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "Keywords"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthor"
+                "$ref": "#/components/schemas/NewKeywords"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single keywords record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single keywords based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,86 +495,11 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "Keywords"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/authors/{author_id}/organizations/{organization_id}": {
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Author"
-        ],
-        "parameters": [
-          {
-            "name": "author_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "organization_id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -589,227 +514,19 @@
   },
   "components": {
     "schemas": {
-      "Author": {
+      "Keywords": {
         "required": [
-          "id",
-          "google_token",
-          "google_user_id"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "username": {
+          "name": {
             "type": "string"
           },
-          "full_name": {
-            "type": "string"
-          },
-          "organizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "display_name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "display_name": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "authors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "supervisors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "profile_pic": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "projects": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "creation_date": {
-                  "type": "string"
-                },
-                "picture": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "extra_content": {
-                  "type": "string"
-                },
-                "organization": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "component"
-                },
-                "documentation": {
-                  "type": "string"
-                },
-                "authors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "supervisors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "views": {
-                  "type": "integer"
-                },
-                "recommendations": {
-                  "type": "string"
-                },
-                "project_keywords": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "socials": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "social_profile_url"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "social_name": {
-                  "type": "string"
-                },
-                "social_profile_url": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "mail": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "about": {
-            "type": "string"
+          "score": {
+            "type": "number"
           },
           "created_by": {
             "required": [
@@ -901,65 +618,13 @@
           }
         }
       },
-      "NewAuthor": {
-        "required": [
-          "google_token",
-          "google_user_id"
-        ],
+      "NewKeywords": {
         "properties": {
-          "username": {
+          "name": {
             "type": "string"
           },
-          "full_name": {
-            "type": "string"
-          },
-          "organizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "projects": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "socials": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "social_profile_url"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "social_name": {
-                  "type": "string"
-                },
-                "social_profile_url": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "mail": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "google_token": {
-            "type": "string"
-          },
-          "google_user_id": {
-            "type": "string"
-          },
-          "about": {
-            "type": "string"
+          "score": {
+            "type": "number"
           },
           "created_by": {
             "type": "string"
@@ -973,7 +638,7 @@
   },
   "tags": [
     {
-      "name": "Author"
+      "name": "Keywords"
     }
   ]
 }

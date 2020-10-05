@@ -1325,26 +1325,6 @@
             "type": "integer",
             "default": 0
           },
-          "keywords": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "score": {
-                  "type": "number"
-                }
-              }
-            }
-          },
           "recommendations": {
             "required": [
               "id",
@@ -1396,11 +1376,33 @@
               "views": {
                 "type": "integer"
               },
-              "keywords": {
-                "type": "component"
-              },
               "recommendations": {
                 "type": "string"
+              },
+              "project_keywords": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "project_keywords": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "created_by": {
                 "type": "string"
@@ -1564,27 +1566,10 @@
             "type": "integer",
             "default": 0
           },
-          "keywords": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "score": {
-                  "type": "number"
-                }
-              }
-            }
-          },
           "recommendations": {
+            "type": "string"
+          },
+          "project_keywords": {
             "type": "string"
           },
           "created_by": {

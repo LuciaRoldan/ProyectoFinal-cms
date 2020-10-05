@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "keywords",
+  "info": {
+    "name": "Keywords"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "score": {
+      "type": "decimal"
+    }
+  }
+}
