@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_array_keywords",
+  "info": {
+    "name": "keywords",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "score": {
+      "type": "decimal"
+    }
+  }
+}

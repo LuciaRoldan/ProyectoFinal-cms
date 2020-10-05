@@ -47,18 +47,26 @@
       "collection": "documentation"
     },
     "authors": {
-      "via": "projects",
       "collection": "author",
+      "via": "projects",
       "dominant": true
     },
     "supervisors": {
-      "via": "projects",
       "collection": "supervisor",
+      "via": "projects",
       "dominant": true
     },
     "views": {
       "type": "integer",
       "default": 0
+    },
+    "keywords": {
+      "type": "component",
+      "repeatable": true,
+      "component": "array.keywords"
+    },
+    "recommendations": {
+      "collection": "project"
     }
   }
 }

@@ -691,6 +691,12 @@
                 "views": {
                   "type": "integer"
                 },
+                "keywords": {
+                  "type": "component"
+                },
+                "recommendations": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
