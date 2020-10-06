@@ -1325,71 +1325,6 @@
             "type": "integer",
             "default": 0
           },
-          "recommendations": {
-            "required": [
-              "id",
-              "title"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "creation_date": {
-                "type": "string"
-              },
-              "picture": {
-                "type": "string"
-              },
-              "category": {
-                "type": "string"
-              },
-              "extra_content": {
-                "type": "string"
-              },
-              "organization": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "component"
-              },
-              "documentation": {
-                "type": "string"
-              },
-              "authors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "supervisors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "views": {
-                "type": "integer"
-              },
-              "recommendations": {
-                "type": "string"
-              },
-              "project_keywords": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "project_keywords": {
             "required": [
               "id"
@@ -1399,6 +1334,28 @@
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "recommendations": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "project": {
                 "type": "string"
               },
               "score": {
@@ -1566,10 +1523,10 @@
             "type": "integer",
             "default": 0
           },
-          "recommendations": {
+          "project_keywords": {
             "type": "string"
           },
-          "project_keywords": {
+          "recommendations": {
             "type": "string"
           },
           "created_by": {

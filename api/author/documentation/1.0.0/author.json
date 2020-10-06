@@ -766,10 +766,10 @@
                 "views": {
                   "type": "integer"
                 },
-                "recommendations": {
+                "project_keywords": {
                   "type": "string"
                 },
-                "project_keywords": {
+                "recommendations": {
                   "type": "string"
                 },
                 "created_by": {

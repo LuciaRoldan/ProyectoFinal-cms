@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommendations",
+  "info": {
+    "name": "Recommendation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "project": {
+      "model": "project"
+    },
+    "score": {
+      "type": "decimal"
+    }
+  }
+}

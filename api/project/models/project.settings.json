@@ -60,11 +60,11 @@
       "type": "integer",
       "default": 0
     },
-    "recommendations": {
-      "collection": "project"
-    },
     "project_keywords": {
       "collection": "keywords"
+    },
+    "recommendations": {
+      "collection": "recommendation"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/supervisors": {
+    "/recommendations": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Supervisor"
+                    "$ref": "#/components/schemas/Recommendation"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Supervisor"
+          "Recommendation"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Supervisor"
+                  "$ref": "#/components/schemas/Recommendation"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Supervisor"
+          "Recommendation"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSupervisor"
+                "$ref": "#/components/schemas/NewRecommendation"
               }
             }
           }
         }
       }
     },
-    "/supervisors/count": {
+    "/recommendations/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Supervisor"
+          "Recommendation"
         ],
         "parameters": []
       }
     },
-    "/supervisors/{id}": {
+    "/recommendations/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Supervisor"
+                  "$ref": "#/components/schemas/Recommendation"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Supervisor"
+          "Recommendation"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Supervisor"
+                  "$ref": "#/components/schemas/Recommendation"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Supervisor"
+          "Recommendation"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSupervisor"
+                "$ref": "#/components/schemas/NewRecommendation"
               }
             }
           }
@@ -495,86 +495,11 @@
         },
         "summary": "",
         "tags": [
-          "Supervisor"
+          "Recommendation"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/supervisors/{supervisor_id}/organizations/{organization_id}": {
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Supervisor"
-        ],
-        "parameters": [
-          {
-            "name": "supervisor_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "organization_id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -589,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Supervisor": {
+      "Recommendation": {
         "required": [
           "id"
         ],
@@ -597,110 +522,61 @@
           "id": {
             "type": "string"
           },
-          "full_name": {
-            "type": "string"
-          },
-          "username": {
-            "type": "string"
-          },
-          "organizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "display_name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "display_name": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "authors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "supervisors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "profile_pic": {
+          "project": {
             "required": [
               "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "title"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "title": {
                 "type": "string"
               },
-              "alternativeText": {
+              "description": {
                 "type": "string"
               },
-              "caption": {
+              "creation_date": {
                 "type": "string"
               },
-              "width": {
+              "picture": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "extra_content": {
+                "type": "string"
+              },
+              "organization": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "component"
+              },
+              "documentation": {
+                "type": "string"
+              },
+              "authors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "supervisors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "views": {
                 "type": "integer"
               },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
+              "project_keywords": {
                 "type": "string"
               },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
+              "recommendations": {
                 "type": "string"
               },
               "created_by": {
@@ -711,103 +587,8 @@
               }
             }
           },
-          "projects": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "creation_date": {
-                  "type": "string"
-                },
-                "picture": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "extra_content": {
-                  "type": "string"
-                },
-                "organization": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "component"
-                },
-                "documentation": {
-                  "type": "string"
-                },
-                "authors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "supervisors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "views": {
-                  "type": "integer"
-                },
-                "project_keywords": {
-                  "type": "string"
-                },
-                "recommendations": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "socials": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "social_profile_url"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "social_name": {
-                  "type": "string"
-                },
-                "social_profile_url": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "mail": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "about": {
-            "type": "string"
+          "score": {
+            "type": "number"
           },
           "created_by": {
             "required": [
@@ -899,61 +680,13 @@
           }
         }
       },
-      "NewSupervisor": {
+      "NewRecommendation": {
         "properties": {
-          "full_name": {
+          "project": {
             "type": "string"
           },
-          "username": {
-            "type": "string"
-          },
-          "organizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "projects": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "socials": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "social_profile_url"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "social_name": {
-                  "type": "string"
-                },
-                "social_profile_url": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "google_token": {
-            "type": "string"
-          },
-          "google_user_id": {
-            "type": "string"
-          },
-          "mail": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "about": {
-            "type": "string"
+          "score": {
+            "type": "number"
           },
           "created_by": {
             "type": "string"
@@ -967,7 +700,7 @@
   },
   "tags": [
     {
-      "name": "Supervisor"
+      "name": "Recommendation"
     }
   ]
 }
