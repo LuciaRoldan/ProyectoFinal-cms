@@ -3079,7 +3079,7 @@ cloudinary-core@^2.10.2:
   resolved "https://registry.yarnpkg.com/cloudinary-core/-/cloudinary-core-2.11.3.tgz#1440f61c6280485094aac87021b7e10f746dc69e"
   integrity sha512-ZRnpjSgvx+LbSf+aEz5NKzxDB4Z0436aY/0BSDa90kAHiwAyd84VyEi95I74SE80e15Ri9t5S2xtksTXpzk9Xw==
 
-cloudinary@^1.23.0:
+cloudinary@^1.14.0:
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.23.0.tgz#27885567cf698e4ed5f5cc8d57974cb4b16db52b"
   integrity sha512-akOxzroonvwWkuSVq7BI50nYpZPRXc5DbQIYETCVeKX9ZoToH2Gvc3MdUH63UtKiszuGYE51q2B+jQsJkBp2AQ==
@@ -6348,7 +6348,7 @@ lodash@4.17.12:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.12.tgz#a712c74fdc31f7ecb20fe44f157d802d208097ef"
   integrity sha512-+CiwtLnsJhX03p20mwXuvhoebatoh5B3tt+VvYlrPgZC1g36y+RRbkufX95Xa+X4I59aWEacDFYwnJZiyBh9gA==
 
-lodash@4.17.19, lodash@^4.1.1, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
+lodash@^4.1.1, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
@@ -7510,11 +7510,6 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
-
-pluralize@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
-  integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
 
 popper.js@^1.14.4:
   version "1.16.1"
@@ -9579,13 +9574,13 @@ strapi-plugin-users-permissions@3.1.0:
     strapi-utils "3.1.0"
     uuid "^3.1.0"
 
-strapi-provider-email-sendgrid@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/strapi-provider-email-sendgrid/-/strapi-provider-email-sendgrid-3.1.4.tgz#4f3a75951232d946257e9a0dc9668c60963bb52d"
-  integrity sha512-8lUEKBwXYit85Bj6pFW0lowRoavdkO/6dBvwIUmB+DLuNwKkvQX3bR3gNu9Odn+y/LPuSYL4mXD/osD3+1nWTg==
+strapi-provider-email-sendgrid@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-sendgrid/-/strapi-provider-email-sendgrid-3.1.0.tgz#91148d275f2d07389d073bc2e804524203ee6005"
+  integrity sha512-D5mivob+vzzfVZNhli16FkJRMJVWWLThxpd4gQAV0C0cA7XDD+hEEDqBO9gL4uCMDZmv7YH6/ZUq/sMhXY4nLQ==
   dependencies:
     "@sendgrid/mail" "6.4.0"
-    strapi-utils "3.1.4"
+    strapi-utils "3.1.0"
 
 strapi-provider-email-sendmail@3.1.0:
   version "3.1.0"
@@ -9595,12 +9590,12 @@ strapi-provider-email-sendmail@3.1.0:
     sendmail "^1.6.1"
     strapi-utils "3.1.0"
 
-strapi-provider-upload-cloudinary@^3.2.0:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/strapi-provider-upload-cloudinary/-/strapi-provider-upload-cloudinary-3.2.3.tgz#3076631eda29388bb164226feb6ae55dd9f84dd1"
-  integrity sha512-ZedjoOlIHpHdTE+Bg5xDMZY99OZOVNEKvvYLnogmvGH8zinon8WrQAEyDor6Om/v3lRUaY8oNsn4wEwbvrPCGA==
+strapi-provider-upload-cloudinary@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/strapi-provider-upload-cloudinary/-/strapi-provider-upload-cloudinary-3.1.0.tgz#e059288b65763da868913ce0f32c227fb7145a0a"
+  integrity sha512-2z0P7RiPfFV4Rf/XgBX4iJwKla6myyq5jBO1VdaoBn+zRu1xlAGUzUJMlNhy8TwcG/m+sTpCmXsBo9YOPoK7Rw==
   dependencies:
-    cloudinary "^1.23.0"
+    cloudinary "^1.14.0"
     into-stream "^5.1.0"
 
 strapi-provider-upload-local@3.1.0:
@@ -9619,18 +9614,6 @@ strapi-utils@3.1.0:
     pino "^4.7.1"
     pluralize "^7.0.0"
     shelljs "^0.8.3"
-    yup "0.28.1"
-
-strapi-utils@3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/strapi-utils/-/strapi-utils-3.1.4.tgz#77a5d03ef9de8da5653f3e9275d24e8a062a6266"
-  integrity sha512-BcRW6xcwW0glisgJ3VR+XkakV9Bza5JLY9+ndgo/yjmCthjLobUO/Dc/9T35eCkyReXYweCquW/HoPkOMbdm9g==
-  dependencies:
-    "@sindresorhus/slugify" "1.1.0"
-    date-fns "^2.8.1"
-    lodash "4.17.19"
-    pino "^4.7.1"
-    pluralize "^8.0.0"
     yup "0.28.1"
 
 strapi@3.1.0:
