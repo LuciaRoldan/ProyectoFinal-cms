@@ -591,9 +591,7 @@
     "schemas": {
       "Author": {
         "required": [
-          "id",
-          "google_token",
-          "google_user_id"
+          "id"
         ],
         "properties": {
           "id": {
@@ -902,10 +900,6 @@
         }
       },
       "NewAuthor": {
-        "required": [
-          "google_token",
-          "google_user_id"
-        ],
         "properties": {
           "username": {
             "type": "string"

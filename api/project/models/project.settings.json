@@ -47,8 +47,8 @@
       "collection": "documentation"
     },
     "authors": {
-      "collection": "author",
       "via": "projects",
+      "collection": "author",
       "dominant": true
     },
     "supervisors": {

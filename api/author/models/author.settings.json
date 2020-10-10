@@ -30,8 +30,8 @@
       "required": false
     },
     "projects": {
-      "via": "authors",
-      "collection": "project"
+      "collection": "project",
+      "via": "authors"
     },
     "socials": {
       "type": "component",
@@ -49,12 +49,12 @@
       "type": "string",
       "private": true,
       "unique": true,
-      "required": true
+      "required": false
     },
     "google_user_id": {
       "type": "string",
       "private": true,
-      "required": true,
+      "required": false,
       "unique": true
     },
     "about": {

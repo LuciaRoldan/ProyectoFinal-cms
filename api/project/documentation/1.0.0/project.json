@@ -1207,9 +1207,7 @@
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "google_token",
-                "google_user_id"
+                "id"
               ],
               "properties": {
                 "id": {
