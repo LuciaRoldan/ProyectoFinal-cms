@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "recommendations",
   "info": {
-    "name": "Recommendation"
+    "name": "Recommendations"
   },
   "options": {
     "increments": true,
