@@ -48,14 +48,14 @@
     "google_token": {
       "type": "string",
       "private": true,
-      "unique": true,
+      "unique": false,
       "required": false
     },
     "google_user_id": {
       "type": "string",
       "private": true,
       "required": false,
-      "unique": true
+      "unique": false
     },
     "about": {
       "type": "text"
