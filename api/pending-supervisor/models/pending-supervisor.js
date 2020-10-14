@@ -8,7 +8,6 @@
 module.exports = {
   lifecycles: {
     afterUpdate: async (model) => {
-      console.log(model);
       if (model.approved) {
         const supervisor = {
           mail: model.mail,
@@ -16,8 +15,13 @@ module.exports = {
           full_name: model.full_name,
           organizations: [model.organization.id],
         };
+        console.log(
+          `Approved user ${supervisor.mail}. Creating and sending email.`
+        );
 
         await strapi.query("supervisor").create(supervisor);
+
+        console.log("Supervisor created correctly");
 
         await strapi.plugins["email"].services.email.send({
           to: model.mail,
@@ -30,6 +34,8 @@ module.exports = {
             login: strapi.config.get("server.supervisorLoginUrl"),
           },
         });
+
+        console.log(`Email for ${supervisor.mail} sent correctly`);
 
         strapi.query("pending-supervisor").delete({ id: model.id });
       }

@@ -10,11 +10,13 @@ module.exports = {
     beforeCreate: async (data) => {
       if (data.google_user_id) {
         const googleId = data.google_user_id;
-        strapi.query("author").find({ google_user_id: googleId }).then(user => {
-          if (user != null || user != []) {
-            throw new Error(`Duplicate key google user id ${googleId}`);
-          }});
-        
+        const user = await strapi
+          .query("author")
+          .findOne({ google_user_id: googleId });
+
+        if (user) {
+          throw new Error(`Duplicate key google user id ${googleId}`);
+        }
       }
     },
   },

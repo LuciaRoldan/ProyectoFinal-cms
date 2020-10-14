@@ -532,7 +532,6 @@
           "id",
           "mail",
           "full_name",
-          "approved",
           "google_user_id"
         ],
         "properties": {
@@ -680,7 +679,6 @@
         "required": [
           "mail",
           "full_name",
-          "approved",
           "google_user_id"
         ],
         "properties": {
