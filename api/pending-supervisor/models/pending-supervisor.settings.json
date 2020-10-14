@@ -22,9 +22,7 @@
     "approved": {
       "type": "boolean",
       "default": false,
-      "required": true,
-      "private": true,
-      "unique": true
+      "private": true
     },
     "google_user_id": {
       "type": "string",
