@@ -14,6 +14,7 @@ module.exports = {
           google_user_id: model.google_user_id,
           full_name: model.full_name,
           organizations: [model.organization.id],
+          profile_pic: model.profile_pic
         };
         console.log(
           `Approved user ${supervisor.mail}. Creating and sending email.`
