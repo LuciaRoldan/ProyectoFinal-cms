@@ -31,6 +31,17 @@
     },
     "organization": {
       "model": "organization"
+    },
+    "profile_pic": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
