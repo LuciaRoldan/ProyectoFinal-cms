@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/12/2020 2:10:12 PM"
+    "x-generation-date": "10/13/2020 9:07:38 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8509,7 +8509,11 @@
       },
       "Pending-supervisor": {
         "required": [
-          "id"
+          "id",
+          "mail",
+          "full_name",
+          "approved",
+          "google_user_id"
         ],
         "properties": {
           "id": {
@@ -8653,6 +8657,12 @@
         }
       },
       "NewPending-supervisor": {
+        "required": [
+          "mail",
+          "full_name",
+          "approved",
+          "google_user_id"
+        ],
         "properties": {
           "mail": {
             "type": "string"

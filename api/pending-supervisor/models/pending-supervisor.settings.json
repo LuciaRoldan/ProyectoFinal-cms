@@ -10,19 +10,26 @@
   },
   "attributes": {
     "mail": {
-      "type": "email"
+      "type": "email",
+      "required": true,
+      "unique": true
     },
     "full_name": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "approved": {
       "type": "boolean",
       "default": false,
-      "required": false,
-      "private": true
+      "required": true,
+      "private": true,
+      "unique": true
     },
     "google_user_id": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "organization": {
       "model": "organization"

@@ -529,7 +529,11 @@
     "schemas": {
       "Pending-supervisor": {
         "required": [
-          "id"
+          "id",
+          "mail",
+          "full_name",
+          "approved",
+          "google_user_id"
         ],
         "properties": {
           "id": {
@@ -673,6 +677,12 @@
         }
       },
       "NewPending-supervisor": {
+        "required": [
+          "mail",
+          "full_name",
+          "approved",
+          "google_user_id"
+        ],
         "properties": {
           "mail": {
             "type": "string"
