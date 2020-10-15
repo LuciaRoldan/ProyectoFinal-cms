@@ -56,6 +56,15 @@
     },
     "about": {
       "type": "text"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/14/2020 6:57:14 PM"
+    "x-generation-date": "10/14/2020 11:35:23 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7613,6 +7613,15 @@
           "about": {
             "type": "string"
           },
+          "facebook": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "linkedin": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -7757,6 +7766,15 @@
             "type": "string"
           },
           "about": {
+            "type": "string"
+          },
+          "facebook": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "linkedin": {
             "type": "string"
           },
           "created_by": {
@@ -8319,6 +8337,15 @@
                 "about": {
                   "type": "string"
                 },
+                "facebook": {
+                  "type": "string"
+                },
+                "twitter": {
+                  "type": "string"
+                },
+                "linkedin": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -8375,6 +8402,15 @@
                   "type": "string"
                 },
                 "about": {
+                  "type": "string"
+                },
+                "facebook": {
+                  "type": "string"
+                },
+                "twitter": {
+                  "type": "string"
+                },
+                "linkedin": {
                   "type": "string"
                 },
                 "created_by": {
@@ -9009,6 +9045,15 @@
                 "about": {
                   "type": "string"
                 },
+                "facebook": {
+                  "type": "string"
+                },
+                "twitter": {
+                  "type": "string"
+                },
+                "linkedin": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -9065,6 +9110,15 @@
                   "type": "string"
                 },
                 "about": {
+                  "type": "string"
+                },
+                "facebook": {
+                  "type": "string"
+                },
+                "twitter": {
+                  "type": "string"
+                },
+                "linkedin": {
                   "type": "string"
                 },
                 "created_by": {
@@ -9694,6 +9748,15 @@
           "about": {
             "type": "string"
           },
+          "facebook": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "linkedin": {
+            "type": "string"
+          },
           "created_by": {
             "required": [
               "id",
@@ -9838,6 +9901,15 @@
             "type": "string"
           },
           "about": {
+            "type": "string"
+          },
+          "facebook": {
+            "type": "string"
+          },
+          "twitter": {
+            "type": "string"
+          },
+          "linkedin": {
             "type": "string"
           },
           "created_by": {
