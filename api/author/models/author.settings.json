@@ -68,6 +68,9 @@
     },
     "linkedin": {
       "type": "string"
+    },
+    "views": {
+      "collection": "view"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/authors": {
+    "/views": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Author"
+                    "$ref": "#/components/schemas/View"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "View"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Author"
+                  "$ref": "#/components/schemas/View"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "View"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthor"
+                "$ref": "#/components/schemas/NewView"
               }
             }
           }
         }
       }
     },
-    "/authors/count": {
+    "/views/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "View"
         ],
         "parameters": []
       }
     },
-    "/authors/{id}": {
+    "/views/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Author"
+                  "$ref": "#/components/schemas/View"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "View"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Author"
+                  "$ref": "#/components/schemas/View"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "View"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthor"
+                "$ref": "#/components/schemas/NewView"
               }
             }
           }
@@ -495,86 +495,11 @@
         },
         "summary": "",
         "tags": [
-          "Author"
+          "View"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/authors/{author_id}/organizations/{organization_id}": {
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Author"
-        ],
-        "parameters": [
-          {
-            "name": "author_id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "organization_id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -589,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Author": {
+      "View": {
         "required": [
           "id"
         ],
@@ -597,245 +522,8 @@
           "id": {
             "type": "string"
           },
-          "username": {
+          "project_id": {
             "type": "string"
-          },
-          "full_name": {
-            "type": "string"
-          },
-          "organizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "display_name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "display_name": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "authors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "supervisors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "profile_pic": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "projects": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "creation_date": {
-                  "type": "string"
-                },
-                "picture": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "extra_content": {
-                  "type": "string"
-                },
-                "organization": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "component"
-                },
-                "documentation": {
-                  "type": "string"
-                },
-                "authors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "supervisors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "views": {
-                  "type": "integer"
-                },
-                "project_keywords": {
-                  "type": "string"
-                },
-                "recommendations": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "socials": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "social_profile_url"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "social_name": {
-                  "type": "string"
-                },
-                "social_profile_url": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "mail": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "about": {
-            "type": "string"
-          },
-          "facebook": {
-            "type": "string"
-          },
-          "twitter": {
-            "type": "string"
-          },
-          "linkedin": {
-            "type": "string"
-          },
-          "views": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "project_id": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "created_by": {
             "required": [
@@ -927,72 +615,9 @@
           }
         }
       },
-      "NewAuthor": {
+      "NewView": {
         "properties": {
-          "username": {
-            "type": "string"
-          },
-          "full_name": {
-            "type": "string"
-          },
-          "organizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "projects": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "socials": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "social_profile_url"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "social_name": {
-                  "type": "string"
-                },
-                "social_profile_url": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "mail": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "google_token": {
-            "type": "string"
-          },
-          "google_user_id": {
-            "type": "string"
-          },
-          "about": {
-            "type": "string"
-          },
-          "facebook": {
-            "type": "string"
-          },
-          "twitter": {
-            "type": "string"
-          },
-          "linkedin": {
-            "type": "string"
-          },
-          "views": {
+          "project_id": {
             "type": "string"
           },
           "created_by": {
@@ -1007,7 +632,7 @@
   },
   "tags": [
     {
-      "name": "Author"
+      "name": "View"
     }
   ]
 }

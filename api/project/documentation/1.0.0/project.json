@@ -1261,6 +1261,9 @@
                 "linkedin": {
                   "type": "string"
                 },
+                "views": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
