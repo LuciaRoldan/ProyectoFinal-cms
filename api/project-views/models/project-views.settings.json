@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "views",
+  "collectionName": "project_views",
   "info": {
-    "name": "View"
+    "name": "ProjectViews"
   },
   "options": {
     "increments": true,
