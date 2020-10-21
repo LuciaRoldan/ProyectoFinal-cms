@@ -9,7 +9,7 @@
     "tag_name": {
       "type": "string",
       "required": true,
-      "unique": true,
+      "unique": false,
       "regex": "\\w+"
     },
     "display_name": {
