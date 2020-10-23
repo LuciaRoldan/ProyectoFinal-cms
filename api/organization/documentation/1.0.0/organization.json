@@ -654,6 +654,9 @@
                 "linkedin": {
                   "type": "string"
                 },
+                "ghost": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -720,6 +723,9 @@
                 },
                 "linkedin": {
                   "type": "string"
+                },
+                "ghost": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"

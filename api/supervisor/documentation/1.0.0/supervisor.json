@@ -773,6 +773,9 @@
                 "drive_folder_id": {
                   "type": "string"
                 },
+                "open": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -820,6 +823,9 @@
           },
           "linkedin": {
             "type": "string"
+          },
+          "ghost": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -975,6 +981,9 @@
           },
           "linkedin": {
             "type": "string"
+          },
+          "ghost": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"

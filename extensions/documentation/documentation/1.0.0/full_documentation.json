@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/23/2020 3:27:45 PM"
+    "x-generation-date": "10/23/2020 6:05:26 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7577,6 +7577,9 @@
                 "drive_folder_id": {
                   "type": "string"
                 },
+                "open": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -7624,6 +7627,10 @@
           },
           "linkedin": {
             "type": "string"
+          },
+          "ghost": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "required": [
@@ -7779,6 +7786,10 @@
           },
           "linkedin": {
             "type": "string"
+          },
+          "ghost": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"
@@ -8349,6 +8360,9 @@
                 "linkedin": {
                   "type": "string"
                 },
+                "ghost": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -8415,6 +8429,9 @@
                 },
                 "linkedin": {
                   "type": "string"
+                },
+                "ghost": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"
@@ -9057,6 +9074,9 @@
                 "linkedin": {
                   "type": "string"
                 },
+                "ghost": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -9124,6 +9144,9 @@
                 "linkedin": {
                   "type": "string"
                 },
+                "ghost": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -9180,6 +9203,10 @@
                 "type": "string"
               }
             }
+          },
+          "open": {
+            "type": "boolean",
+            "default": true
           },
           "created_by": {
             "required": [
@@ -9344,6 +9371,10 @@
           "drive_folder_id": {
             "type": "string"
           },
+          "open": {
+            "type": "boolean",
+            "default": true
+          },
           "created_by": {
             "type": "string"
           },
@@ -9419,6 +9450,9 @@
               },
               "drive_folder_id": {
                 "type": "string"
+              },
+              "open": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -9721,6 +9755,9 @@
                 "drive_folder_id": {
                   "type": "string"
                 },
+                "open": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -9768,6 +9805,9 @@
           },
           "linkedin": {
             "type": "string"
+          },
+          "ghost": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -9923,6 +9963,9 @@
           },
           "linkedin": {
             "type": "string"
+          },
+          "ghost": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"
