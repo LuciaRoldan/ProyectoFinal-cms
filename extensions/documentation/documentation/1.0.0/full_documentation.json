@@ -9743,13 +9743,11 @@
                 "linkedin": {
                   "type": "string"
                 },
-<<<<<<< HEAD
                 "views": {
                   "type": "string"
-=======
+                },
                 "ghost": {
                   "type": "boolean"
->>>>>>> master
                 },
                 "created_by": {
                   "type": "string"
