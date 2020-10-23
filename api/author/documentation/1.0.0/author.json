@@ -1002,14 +1002,12 @@
           "linkedin": {
             "type": "string"
           },
-<<<<<<< HEAD
           "views": {
             "type": "string"
-=======
+          },
           "ghost": {
             "type": "boolean",
             "default": false
->>>>>>> master
           },
           "created_by": {
             "type": "string"
