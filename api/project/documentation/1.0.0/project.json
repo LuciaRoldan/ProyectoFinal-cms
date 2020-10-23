@@ -1545,6 +1545,9 @@
           "recommendations": {
             "type": "string"
           },
+          "drive_folder_id": {
+            "type": "string"
+          },
           "created_by": {
             "type": "string"
           },
