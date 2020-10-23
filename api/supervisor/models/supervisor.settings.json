@@ -30,8 +30,8 @@
       "required": false
     },
     "projects": {
-      "via": "supervisors",
-      "collection": "project"
+      "collection": "project",
+      "via": "supervisors"
     },
     "socials": {
       "type": "component",
@@ -65,6 +65,9 @@
     },
     "linkedin": {
       "type": "string"
+    },
+    "ghost": {
+      "type": "boolean"
     }
   }
 }

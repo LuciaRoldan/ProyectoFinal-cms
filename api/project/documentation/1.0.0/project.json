@@ -1264,6 +1264,9 @@
                 "views": {
                   "type": "string"
                 },
+                "ghost": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -1331,6 +1334,9 @@
                 "linkedin": {
                   "type": "string"
                 },
+                "ghost": {
+                  "type": "boolean"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -1387,6 +1393,10 @@
                 "type": "string"
               }
             }
+          },
+          "open": {
+            "type": "boolean",
+            "default": true
           },
           "created_by": {
             "required": [
@@ -1550,6 +1560,10 @@
           },
           "drive_folder_id": {
             "type": "string"
+          },
+          "open": {
+            "type": "boolean",
+            "default": true
           },
           "created_by": {
             "type": "string"
