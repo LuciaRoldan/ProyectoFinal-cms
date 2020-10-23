@@ -65,6 +65,10 @@
     },
     "recommendations": {
       "collection": "recommendation"
+    },
+    "drive_folder_id": {
+      "type": "string",
+      "private": true
     }
   }
 }
