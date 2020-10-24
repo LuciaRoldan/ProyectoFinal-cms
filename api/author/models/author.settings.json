@@ -30,8 +30,8 @@
       "required": false
     },
     "projects": {
-      "collection": "project",
-      "via": "authors"
+      "via": "authors",
+      "collection": "project"
     },
     "socials": {
       "type": "component",
@@ -68,9 +68,6 @@
     },
     "linkedin": {
       "type": "string"
-    },
-    "views": {
-      "collection": "project-views"
     },
     "ghost": {
       "type": "boolean",

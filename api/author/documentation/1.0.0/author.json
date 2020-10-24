@@ -824,25 +824,6 @@
           "linkedin": {
             "type": "string"
           },
-          "views": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "project_id": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "ghost": {
             "type": "boolean",
             "default": false
@@ -1000,9 +981,6 @@
             "type": "string"
           },
           "linkedin": {
-            "type": "string"
-          },
-          "views": {
             "type": "string"
           },
           "ghost": {

@@ -1261,9 +1261,6 @@
                 "linkedin": {
                   "type": "string"
                 },
-                "views": {
-                  "type": "string"
-                },
                 "ghost": {
                   "type": "boolean"
                 },
@@ -1393,6 +1390,9 @@
                 "type": "string"
               }
             }
+          },
+          "drive_folder_id": {
+            "type": "string"
           },
           "open": {
             "type": "boolean",

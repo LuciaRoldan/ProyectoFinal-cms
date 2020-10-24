@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/23/2020 6:46:34 PM"
+    "x-generation-date": "10/23/2020 8:54:38 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8152,25 +8152,6 @@
           "linkedin": {
             "type": "string"
           },
-          "views": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "project_id": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "ghost": {
             "type": "boolean",
             "default": false
@@ -8328,9 +8309,6 @@
             "type": "string"
           },
           "linkedin": {
-            "type": "string"
-          },
-          "views": {
             "type": "string"
           },
           "ghost": {
@@ -8904,9 +8882,6 @@
                   "type": "string"
                 },
                 "linkedin": {
-                  "type": "string"
-                },
-                "views": {
                   "type": "string"
                 },
                 "ghost": {
@@ -9737,9 +9712,6 @@
                 "linkedin": {
                   "type": "string"
                 },
-                "views": {
-                  "type": "string"
-                },
                 "ghost": {
                   "type": "boolean"
                 },
@@ -9869,6 +9841,9 @@
                 "type": "string"
               }
             }
+          },
+          "drive_folder_id": {
+            "type": "string"
           },
           "open": {
             "type": "boolean",

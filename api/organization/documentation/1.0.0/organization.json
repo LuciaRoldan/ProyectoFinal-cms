@@ -654,9 +654,6 @@
                 "linkedin": {
                   "type": "string"
                 },
-                "views": {
-                  "type": "string"
-                },
                 "ghost": {
                   "type": "boolean"
                 },
