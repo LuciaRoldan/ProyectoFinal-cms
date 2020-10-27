@@ -47,13 +47,13 @@
       "collection": "documentation"
     },
     "authors": {
-      "via": "projects",
       "collection": "author",
+      "via": "projects",
       "dominant": true
     },
     "supervisors": {
-      "via": "projects",
       "collection": "supervisor",
+      "via": "projects",
       "dominant": true
     },
     "views": {
@@ -68,7 +68,7 @@
     },
     "drive_folder_id": {
       "type": "string",
-      "private": true
+      "private": false
     },
     "open": {
       "type": "boolean",

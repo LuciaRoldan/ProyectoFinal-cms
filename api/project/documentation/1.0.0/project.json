@@ -1391,6 +1391,9 @@
               }
             }
           },
+          "drive_folder_id": {
+            "type": "string"
+          },
           "open": {
             "type": "boolean",
             "default": true

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/23/2020 6:05:26 PM"
+    "x-generation-date": "10/27/2020 7:23:14 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9203,6 +9203,9 @@
                 "type": "string"
               }
             }
+          },
+          "drive_folder_id": {
+            "type": "string"
           },
           "open": {
             "type": "boolean",
