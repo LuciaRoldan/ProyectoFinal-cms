@@ -28,12 +28,26 @@
       "required": false
     },
     "authors": {
-      "via": "organizations",
-      "collection": "author"
+      "collection": "author",
+      "via": "organizations"
     },
     "supervisors": {
-      "via": "organizations",
-      "collection": "supervisor"
+      "collection": "supervisor",
+      "via": "organizations"
+    },
+    "header": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "color": {
+      "type": "string"
     }
   }
 }

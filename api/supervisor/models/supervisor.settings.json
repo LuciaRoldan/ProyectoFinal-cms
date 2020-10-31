@@ -16,8 +16,8 @@
       "type": "string"
     },
     "organizations": {
-      "collection": "organization",
       "via": "supervisors",
+      "collection": "organization",
       "dominant": true
     },
     "profile_pic": {
