@@ -635,6 +635,12 @@
                     "type": "string"
                   }
                 },
+                "header": {
+                  "type": "string"
+                },
+                "color": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
