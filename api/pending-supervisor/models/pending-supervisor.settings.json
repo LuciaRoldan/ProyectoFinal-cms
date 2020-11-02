@@ -12,11 +12,11 @@
     "mail": {
       "type": "email",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "full_name": {
       "type": "string",
-      "unique": true,
+      "unique": false,
       "required": true
     },
     "approved": {
@@ -27,7 +27,7 @@
     "google_user_id": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "organization": {
       "model": "organization"
